@@ -6,7 +6,7 @@
             .carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
         </style>
     </head>
-    <body>
+    <body class="fixed-sn cyan-skin">
         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
             <div class="container">
@@ -25,8 +25,7 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
+                            <a class="nav-link" href="#">
                             </a>
                         </li>
                     </ul>
@@ -36,13 +35,18 @@
                         @if(auth()->guest())
                         <li class="nav-item">
                             <a href="{{url('login')}}" class="nav-link border border-light rounded">
-                                <i class="fa fa-lock mr-2"></i>Iniciar Sesion
+                                <i class="fas fa-sign-in-alt fa-lg"></i>Iniciar Sesion
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('register')}}" class="nav-link border border-light rounded">
+                                <i class="fas fa-user-plus fa-lg"></i>Registrarse
                             </a>
                         </li>
                         @else
                         <li class="nav-item">
                             <a href="{{url('/home')}}" class="nav-link border border-light rounded">
-                                <i class="fa fa-home mr-2"></i>Home
+                                <i class="fas fa-home fa-lg"></i>Home
                             </a>
                         </li>
                         @endif
@@ -112,7 +116,7 @@
                 <!--/Second slide-->
                 <!--Third slide-->
                 <div class="carousel-item">
-                    <div class="view" style="background-image: url('/img/sidenav3.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    <div class="view" style="background-image: url('/img/uno.png'); background-repeat: no-repeat; background-size:cover;">
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                             <!-- Content -->
@@ -150,7 +154,7 @@
         <!--/.Carousel Wrapper-->
         <!--Footer-->
         <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-            <hr class="my-4">
+            <hr class="my-1">
             <!-- Social icons -->
             <div class="pb-4">
                 <a href="#">

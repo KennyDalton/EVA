@@ -5,18 +5,15 @@
     @include('layouts.htmlheader')
 </head>
 
-<body class="grey lighten-3">
-    
-    <br>
-    <br>
-    <br>
-    <!--Grid row-->
-    <div class="row wow fadeIn">
-        <div class="col-md"></div>
-        <!--Grid column-->
-        <div class="col-md-6 col-xl-5 mb-4 col-md-offset-3">
-            <!--Card-->
-            <div class="card">
+<body style="background:#ededed">
+    <!-- Purple Header -->
+<div class="edge-header unique-color"></div>
+<!-- Main Container -->
+<div class="container free-bird">
+    <div class="row">
+        <div class="col-md-8 col-lg-7 mx-auto float-none white z-depth-1 py-2 px-2">
+            <!--Naked Form-->
+            <div class="card-body">
                 <!--Card content-->
                 <div class="card-body">
                     <!-- Form -->
@@ -24,13 +21,27 @@
                         {{ csrf_field() }}
                         <!-- Heading -->
                         <h3 class="dark-grey-text text-center">
-                        <strong>Registrarse:</strong>
+                        <i class="fas fa-user-plus fa-lg"></i><strong>Registrarse</strong>
                         </h3>
                         <hr>
+                        <div class="col-sm-3">
+                            <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                            </select>
+                        </div>
                         <div class="md-form {{ $errors->has('name') ? 'has-error' : '' }}">
-                            <i class="fa fa-user prefix grey-text"></i>
                             <input type="text" id="name" class="form-control" name="name">
-                            <label for="name">Nombre</label>
+                            <label for="name">Nombres</label>
+                            @if ($errors->has('name'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <div class="md-form {{ $errors->has('name') ? 'has-error' : '' }}">
+                            <input type="text" id="lastname" class="form-control" name="lastname">
+                            <label for="name">Apellidos</label>
                             @if ($errors->has('name'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('name') }}</strong>
@@ -38,7 +49,6 @@
                             @endif
                         </div>
                         <div class="md-form {{ $errors->has('email') ? 'has-error' : '' }}">
-                            <i class="fa fa-envelope prefix grey-text"></i>
                             <input type="text" id="email" class="form-control" name="email">
                             <label for="email">Correo electronico</label>
                             @if ($errors->has('email'))
@@ -48,7 +58,6 @@
                             @endif
                         </div>
                         <div class="md-form {{ $errors->has('password') ? 'has-error' : '' }}">
-                            <i class="fa fa-lock prefix grey-text"></i>
                             <input type="password" id="password" class="form-control" name="password">
                             <label for="password">Contraseña</label>
                             @if ($errors->has('password'))
@@ -58,7 +67,6 @@
                             @endif
                         </div>
                         <div class="md-form {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
-                            <i class="fa fa-lock prefix grey-text"></i>
                             <input type="password" id="password-confirm" class="form-control" name="password_confirmation">
                             <label for="password-confirm">Repetir contraseña</label>
                             @if ($errors->has('password_confirmation'))
@@ -75,13 +83,15 @@
                     <!-- Form -->
                 </div>
             </div>
-            <!--/.Card-->
-        </div>
-        <!--Grid column-->
-        <div class="col-md"></div>
-    </div>
-    <!--Grid row-->
 
+            </div>
+            <!--Naked Form-->
+
+        </div>
+    </div>
+</div>
+<!-- /.Main Container -->
+    
     <!-- SCRIPTS -->
     @include('layouts.scripts')
 

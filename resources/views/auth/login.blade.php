@@ -3,25 +3,15 @@
 
 <head>
     @include('layouts.htmlheader')
-    <style>
-        body,html{height:100%}
-    </style>
 </head>
 
-<body style="background-image: url('/img/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-    <br>
-    <br>
-    <br>
-    <!--Grid row-->
-
-    <div class="row wow fadeIn aling-items-center" style="margin-right:0px; margin-left:0px; margin-top:0px;">
-        <div class="col-md-8 ">
-            <img src="/img/asd.jpg" class="img-fluid z-depth-1-half" alt="">
-        </div>
-        
-        <div class="col-md-4">
-            <!--Form with header-->
-            <div class="card bg-transparent">
+<body style="background:#ededed">
+    <!-- Purple Header -->
+<div class="edge-header unique-color"></div>
+<!-- Main Container -->
+    <div class="container free-bird">
+    <div class="row">
+        <div class="col-md-8 col-lg-7 mx-auto float-none white z-depth-1 py-2 px-2">
                 <div class="card-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
@@ -69,8 +59,8 @@
         </div>
         <div class="col-md"></div>
     </div>
-    <!--Grid row-->
-
+<!-- /.Main Container -->
+    
     <!-- SCRIPTS -->
     @include('layouts.scripts')
 
