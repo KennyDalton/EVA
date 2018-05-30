@@ -4,7 +4,7 @@
         <li style="height: 100%">
             <div class="logo-wrapper waves-light">
                 <a href="#">
-                    <img src="/img/img1.png" class="img-fluid flex-center" style="width: 100%" style="height: 60%" >
+                    <img src="/img/eva.png" class="img-fluid flex-center">
                 </a>
             </div>
         </li>
@@ -41,17 +41,23 @@
                     <div class="collapsible-body">
                         <ul>
                             <li>
-                                <a class="collapsible-header waves-effect arrow-r">Curso 1
-                                <i class="fa fa-angle-down rotate-icon"></i>
+                                <a class="collapsible-header waves-effect arrow-r">
+                    <i class="fas fa-balance-scale"></i> 
+                           Tribunales
+                        <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                                <div class="collapsible-body">  
+                        <ul>
+                            <li>
+                                <a href="/tribunales" class="waves-effect">Tribunales</a>
+                            </li>
+                            <li>
+                                <a href="/renuncia" class="collapsible-header waves-effect arrow-r">
+                                Renuncia Tribunal
                                 </a>
-                                <div class="collapsible-body">
-                                    <ul>
-                                        <li><a href="" class="waves-effect"> Tema 1</a></li>
-                                        <li><a href="" class="waves-effect"> Tema 2</a></li>
-                                        <li><a href="" class="waves-effect"> Tema 3</a></li>
-                                        <li><a href="" class="waves-effect"> Tema 4</a></li>
-                                    </ul>
-                                </div>
+                            </li>
+                        </ul>
+                    </div>  
                             </li>
                             <li>
                                 <a class="collapsible-header waves-effect arrow-r">Curso 2
