@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<body style="background-image: url('/img/fondo1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<body style="background-image: url('/img/eva4.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
 
 <div class="group form-row" style=margin-top:455px;>

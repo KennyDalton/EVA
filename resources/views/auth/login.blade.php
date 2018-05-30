@@ -7,16 +7,26 @@
 
 <body style="background:#ededed">
     <!-- Purple Header -->
-<div class="edge-header unique-color"></div>
+    
+<div class="edge-header blue-grey darken-2" >
+
+<div class="row" >
+    <div class="col-md-3"></div>
+    <h1 ><p class="white-text"></p></h1>
+</div>
+
+</div>
 <!-- Main Container -->
+    
     <div class="container free-bird">
-    <div class="row">
-        <div class="col-md-8 col-lg-7 mx-auto float-none white z-depth-1 py-2 px-2">
+    
+    <div class="row" >
+        <div class="col-md-8 col-lg-6 mx-auto float-none white z-depth-1 py-2 px-2">
                 <div class="card-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
                         <!--Header-->
-                        <div class="form-header  blue-grey darken-3">
+                        <div class="form-header  cyan darken-1">
                             <h3>
                                 <i class="fa fa-lock white-text"></i> Login:
                             </h3>
@@ -40,7 +50,7 @@
                         <br>
 
                         <div class="text-center">
-                            <button class="btn btn-  blue-grey darken-3 waves-effect waves-light">Login</button>
+                            <button class="btn btn-  cyan darken-1 waves-effect waves-light">Login</button>
                         </div>
                     </form>
                     <!-- Form -->
@@ -50,7 +60,7 @@
                     
                     <div class="footer-copyright py-3 text-center" alig="center">
                         © 2018 Copyright:
-                        <a href="#"> ArkGroup.com </a>
+                        <a href="#"> evaGroup.com </a>
                     </div>
                     
                 </div>
