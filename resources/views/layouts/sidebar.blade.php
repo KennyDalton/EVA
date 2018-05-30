@@ -1,7 +1,7 @@
 <div id="slide-out" class="side-nav sn-bg-4 fixed mdb-sidenav">
     <ul class="custom-scrollbar list-unstyled" style="max-height:100vh;">
         <!-- Logo -->
-        <li>
+        <li style="height: 100%">
             <div class="logo-wrapper waves-light">
                 <a href="#">
                     <img src="/img/eva.png" class="img-fluid flex-center">
@@ -19,61 +19,58 @@
             </ul>
         </li>
         <!--/Social-->
-        <hr class="white">
         <!-- Side navigation links -->
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
-                    <i class="fas fa-file-alt"></i>
-                        Proyectos
-                        <i class="fa fa-angle-down rotate-icon"></i>
+                    <i class="fas fa-file-alt"></i>Inicio
                     </a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>
-                                <a href="/proyectos" class="waves-effect">Proyectos</a>
-                            </li>
-                            <li>
-                                <a href="/proyectos/create" class="waves-effect">Nuevo Proyecto</a>
-                            </li>
-                            <li>
-                                <a href="/proyecto_est" class="waves-effect">Asignar Proyecto</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
-                    <i class="fas fa-user"></i>
-                        Docentes & Profesionales
-                        <i class="fa fa-angle-down rotate-icon"></i>
+                    <i class="fas fa-user"></i>Calendario
                     </a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>
-                                <a href="/docentes" class="waves-effect">Docente & Profesionales</a>
-                            </li>
-                            <li>
-                                <a href="/docentes/create" class="waves-effect">Nuevo Docente</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
                     <i class="fa fa-university"></i>
-                        Areas & Sub Areas
+                        Mis cursos
                         <i class="fa fa-angle-down rotate-icon"></i>
                     </a>
                     <div class="collapsible-body">
                         <ul>
                             <li>
-                                <a href="/areas" class="waves-effect">Catalogo Areas</a>
+                                <a class="collapsible-header waves-effect arrow-r">
+                    <i class="fas fa-balance-scale"></i> 
+                           Tribunales
+                        <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                                <div class="collapsible-body">  
+                        <ul>
+                            <li>
+                                <a href="/tribunales" class="waves-effect">Tribunales</a>
                             </li>
                             <li>
-                                <a href="/areas/create" class="waves-effect">Nueva Area</a>
+                                <a href="/renuncia" class="collapsible-header waves-effect arrow-r">
+                                Renuncia Tribunal
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
+                            </li>
+                            <li>
+                                <a class="collapsible-header waves-effect arrow-r">Curso 2
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                                </a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href=""> Tema 1</a></li>
+                                        <li><a href=""> Tema 2</a></li>
+                                        <li><a href=""> Tema 3</a></li>
+                                        <li><a href=""> Tema 4</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -91,10 +88,9 @@
                                 <a href="/tribunales" class="waves-effect">Tribunales</a>
                             </li>
                             <li>
-                    <a href="/renuncia" class="collapsible-header waves-effect arrow-r">
-                         
-                               Renuncia Tribunal
-                    </a>
+                                <a href="/renuncia" class="collapsible-header waves-effect arrow-r">
+                                Renuncia Tribunal
+                                </a>
                             </li>
                         </ul>
                     </div>  
