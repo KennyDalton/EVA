@@ -7,7 +7,7 @@
 
 <body style="background:#ededed">
     <!-- Purple Header -->
-<div class="edge-header unique-color"></div>
+<div class="edge-header blue-grey darken-1"></div>
 <!-- Main Container -->
 <div class="container free-bird">
     <div class="row">
@@ -24,11 +24,13 @@
                         <i class="fas fa-user-plus fa-lg"></i><strong>Registrarse</strong>
                         </h3>
                         <hr>
-                        <div class="col-sm-3">
+                        <div class="row">
+                        <div class="col-md-6">
                             <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
                             <option value="estudiante">Estudiante</option>
                             <option value="docente">Docente</option>
                             </select>
+                        </div>
                         </div>
                         <div class="md-form {{ $errors->has('name') ? 'has-error' : '' }}">
                             <input type="text" id="name" class="form-control" name="name">
@@ -76,7 +78,7 @@
                             @endif
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-indigo">Registrarse</button>
+                            <button class="btn cyan darken-3">Registrarse</button>
                             <hr>
                         </div>
                     </form>

@@ -8,7 +8,7 @@
 <body style="background:#ededed">
     <!-- Purple Header -->
     
-<div class="edge-header blue-grey darken-2" >
+<div class="edge-header blue-grey darken-1" >
 
 <div class="row" >
     <div class="col-md-3"></div>
@@ -26,7 +26,7 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
                         <!--Header-->
-                        <div class="form-header  cyan darken-1">
+                        <div class="form-header  cyan darken-3">
                             <h3>
                                 <i class="fa fa-lock white-text"></i> Login:
                             </h3>
@@ -50,7 +50,7 @@
                         <br>
 
                         <div class="text-center">
-                            <button class="btn btn-  cyan darken-1 waves-effect waves-light">Login</button>
+                            <button class="btn btn-  cyan darken-3 waves-effect waves-light">Login</button>
                         </div>
                     </form>
                     <!-- Form -->
