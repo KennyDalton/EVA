@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 Route::auth();
-
+Route::group(['middleware' => ['auth'],'tipo' => 'docente'], function () {
 Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
+route::get('/index','viewController@index');
+});
