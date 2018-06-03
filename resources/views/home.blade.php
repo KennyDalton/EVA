@@ -2,7 +2,7 @@
 
 @section('content')
 <body style="background-image: url('/img/eva4.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-<h1 style="text-transform: capitalize;color: black;">Bienvenido {{ Auth::user()->tipo }}</h1>
+<h1 style="text-transform: capitalize;color: black;" class="text-center">Bienvenido {{ Auth::user()->tipo }}</h1>
 
 <div class="group form-row" style="margin-top:100%">
 </div>
@@ -33,11 +33,6 @@
 
 </div>
 -->
-
-
-
-
-
 </body>
 
 @endsection
