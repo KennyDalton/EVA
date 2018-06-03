@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 use Illuminate\Contracts\Auth\Guard;
 
+
 use Closure;
 
 class docentes
@@ -23,8 +24,7 @@ class docentes
 
     public function handle($request, Closure $next)
     {
-        // if (Auth::user()->tipo = 'docente')
+        //if (auth::user()->tipo = 'docente')
         return $next($request);
-    
     }
 }
