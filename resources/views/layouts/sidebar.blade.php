@@ -23,7 +23,7 @@
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header waves-effect arrow-r">
+                    <a class="collapsible-header waves-effect arrow-r" href="/home">
                     <i class="fas fa-file-alt"></i>Inicio
                     </a>
                 </li>
