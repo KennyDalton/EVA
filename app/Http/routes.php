@@ -16,9 +16,12 @@ Route::get('/', function () {
 });
 
 Route::auth();
-Route::group(['middleware' => 'docentes'], function () {
+Route::group(['middleware' => 'auth'], function () {
 	route::get('/index','viewController@index');
 	Route::get('/home','HomeController@index');
+	Route::get('/crearCurso','cursoController@index');
+
+
 
 });
-Route::get('/crearCurso','cursoController@index');
+

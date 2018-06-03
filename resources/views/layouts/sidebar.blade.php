@@ -39,32 +39,11 @@
                         <i class="fa fa-angle-down rotate-icon"></i>
                     </a>
                     <div class="collapsible-body">
-                        <ul class="collapsible collapsible-accordion">
+                        <ul>
                             <li>
-                                <a class="collapsible-header waves-effect arrow-r">Curso 1
-                                <i class="fa fa-angle-down rotate-icon"></i>
+                                <a class="waves-effect" href="/crearCurso">
+                                <i class="fas fa-user"></i>Nuevo Curso
                                 </a>
-                                <div class="collapsible-body">
-                                    <ul>
-                                        <li><a href=""> Tema 1</a></li>
-                                        <li><a href=""> Tema 2</a></li>
-                                        <li><a href=""> Tema 3</a></li>
-                                        <li><a href=""> Tema 4</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="collapsible-header waves-effect arrow-r">Curso 2
-                                <i class="fa fa-angle-down rotate-icon"></i>
-                                </a>
-                                <div class="collapsible-body">
-                                    <ul>
-                                        <li><a href=""> Tema 1</a></li>
-                                        <li><a href=""> Tema 2</a></li>
-                                        <li><a href=""> Tema 3</a></li>
-                                        <li><a href=""> Tema 4</a></li>
-                                    </ul>
-                                </div>
                             </li>
                         </ul>
                     </div>
