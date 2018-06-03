@@ -45,6 +45,7 @@
                                 <i class="fa fa-search"></i>
                                     Buscar Cursos
                                 </a>
+                                <a href="/inscribir" class="waves-effect">Inscribirse a un Curso</a>
 
                             </li>
                             <li>
