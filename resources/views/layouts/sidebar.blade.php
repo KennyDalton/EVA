@@ -42,18 +42,23 @@
                         <ul>
                             <li>
                                 <a class="waves-effect" href="/crearCurso">
-                                <i class="fas fa-user"></i>Nuevo Curso
+                                <i class="fas fa-user"></i> Nuevo Curso
                                 </a>
                             </li>
                             <li>
-                                <a class="waves-effect arrow-r" href="/buscador">
+                                <a class="waves-effect" href="/buscador">
                                 <i class="fa fa-search"></i>
                                     Buscar Cursos
                                 </a>
                             </li>
                             <li>
-                                <a class="waves-effect arrow-r" href="/inscribir">
-                                <i class="fa fa-search"></i>
+                                <a class="waves-effect" href="/misCursos">
+                                <i class="fa fa-search"></i> Curso Inscrito
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect" href="/inscribir">
+                                <i class="fa fa-search"></i> 
                                     Inscribirse a un Curso
                                 </a>
                             </li>
