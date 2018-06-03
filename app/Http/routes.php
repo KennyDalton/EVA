@@ -22,3 +22,5 @@ Route::group(['middleware' => 'docentes'], function () {
 
 });
 Route::get('/crearCurso','cursoController@index');
+
+Route::get('/buscador','cursoController@buscador');
