@@ -35,8 +35,8 @@
                         <!--Body-->
                         <div class="md-form">
                             <i class="fa fa-envelope prefix grey-text"></i>
-                            <input type="email" id="email" class="form-control validate" name="email">
                             <label for="email">Your email</label>
+                            <input type="email" id="email" class="form-control validate" name="email">
                         </div>
 
                         <br>

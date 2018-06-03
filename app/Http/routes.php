@@ -16,11 +16,7 @@ Route::get('/', function () {
 });
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::resource('/createCurso', 'cursoController@index');
+Route::group(['middleware' => 'docentes'], function () {
+	route::get('/index','viewController@index');
+	Route::get('/home', 'HomeController@index');
+});
