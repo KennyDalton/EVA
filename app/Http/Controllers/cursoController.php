@@ -26,4 +26,12 @@ class cursoController extends Controller
     {
         return view('cursos.createCurso');
     }
+
+    public function buscador()
+    {
+        return view('cursos.buscador');
+    public function obtenerCurso()
+    {
+        return view('cursos.register');
+    }
 }

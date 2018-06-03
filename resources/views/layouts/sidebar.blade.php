@@ -45,6 +45,18 @@
                                 <i class="fas fa-user"></i>Nuevo Curso
                                 </a>
                             </li>
+                            <li>
+                                <a class="waves-effect arrow-r" href="/buscador">
+                                <i class="fa fa-search"></i>
+                                    Buscar Cursos
+                                </a>
+                            </li>
+                            <li>
+                                <a class="waves-effect arrow-r" href="/inscribir">
+                                <i class="fa fa-search"></i>
+                                    Inscribirse a un Curso
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
