@@ -7,8 +7,9 @@
 	<div class="md-form input-group mb-3">
         <input style="width: 30%" type="text" class="form-control pl-0 rounded-0" id="Search1" type="text" placeholder="Escriba el nombre de algun curso para ser busucado...">	
 	</div>
+	<br>
 	<div >
-	    <table class="table table-striped tablaScroll2 ">
+	    <table class="table table-striped tablaScroll2 table-bordered">
 	        <thead style="">
 	            <tr>
 
@@ -22,40 +23,64 @@
 	                <td style="width: 70%">
 	                    Ingeniería Software
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 						Organización y Métodos
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    METODOLOGIA DE INVESTIGACION Y TECNICAS DE COMUNICACION
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    ELEM. DE PROGRAMACION Y ESTRUC. DE DATOS
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    Diseño de Patrones
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td style="width: 70%">
+	                    ALGORITMOS AVANZADOS
+	                </td>
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td style="width: 70%">
+	                    Taller de Ingeniería de Software 1-2018
+	                </td>
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td style="width: 70%">
+	                    ELEMENTOS DE PROGRAMACION Y ESTRUCTURA DE DATOS
+	                </td>
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-orange btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	        </tbody>
