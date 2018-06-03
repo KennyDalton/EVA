@@ -2,9 +2,9 @@
 
 @section('content')
 <body style="background-image: url('/img/eva4.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-<h1 style="text-transform: capitalize;color: black;">Bienvenido {{ Auth::user()->tipo }}</h1>
+<h1 class="text-center" style="text-transform: capitalize;color: black;">Bienvenido {{ Auth::user()->tipo }}</h1>
 
-<div class="group form-row" style="margin-top:100%">
+<div class="group form-row" style="margin-top:455px">
 </div>
 <!--
 <div class="col-md-2" ></div>

@@ -23,7 +23,7 @@ class docentes
 
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->tipo = 'docente')
+        // if (Auth::user()->tipo = 'docente')
         return $next($request);
     
     }
