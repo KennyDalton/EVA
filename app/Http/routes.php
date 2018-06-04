@@ -23,5 +23,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/buscador','cursoController@buscador');
 	Route::resource('/inscribir', 'cursoController@obtenerCurso');
 	Route::resource('/misCursos', 'cursoController@listaMisCursos');
+	Route::get('/tareas','cursoController@tareas');
+	Route::get('/subirDocumento','cursoController@subirDocumento');
+	Route::get('/crearTarea','cursoController@crearTarea');
 
 });

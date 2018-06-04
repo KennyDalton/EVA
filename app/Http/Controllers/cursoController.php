@@ -40,4 +40,16 @@ class cursoController extends Controller
 
         return view('cursos.cursosList');
     }
+    public function tareas(){
+
+        return view('cursos.tareas');
+    }
+    public function subirDocumento(){
+
+        return view('cursos.subirDocumento');
+    }
+    public function crearTarea(){
+
+        return view('cursos.crearTareas');
+    }
 }

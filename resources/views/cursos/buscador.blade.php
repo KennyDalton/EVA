@@ -3,15 +3,14 @@
 
 	{{ csrf_field() }}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<h1 align="center">Buscador del Proyecto</h1>
+	<h1 align="center">Buscar Curso</h1>
 	<div class="md-form input-group mb-3">
-        <input style="width: 30%" type="text" class="form-control pl-0 rounded-0" id="Search1" type="text" placeholder="Escriba el nombre de algun curso para ser busucado...">	
+        <input style="width: 30%" type="text" class="form-control pl-0 rounded-0" id="Search1" type="text" placeholder="Escriba el nombre de algun curso para ser buscado...">	
 	</div>
 	<div >
 	    <table class="table table-striped tablaScroll2 ">
 	        <thead style="">
 	            <tr>
-
 	                <th style="width: 70%" >Nombre del Curso</th>
 	                <th style="width: 30%" class="text-center">Acciones</th>
 	            </tr>
@@ -22,40 +21,40 @@
 	                <td style="width: 70%">
 	                    Ingeniería Software
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 						Organización y Métodos
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    METODOLOGIA DE INVESTIGACION Y TECNICAS DE COMUNICACION
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    ELEM. DE PROGRAMACION Y ESTRUC. DE DATOS
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	            <tr>
 	                <td style="width: 70%">
 	                    Diseño de Patrones
 	                </td>
-	                <td style="width: 20%" class="text-center">
-	                	
+	                <td style="width: 30%" class="text-center">
+	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
 	            </tr>
 	        </tbody>

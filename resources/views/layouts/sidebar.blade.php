@@ -65,32 +65,6 @@
                         </ul>
                     </div>
                 </li>
-
-                <li>
-                    <a class="collapsible-header waves-effect arrow-r">
-                    <i class="fas fa-balance-scale"></i> 
-                           Tribunales
-                        <i class="fa fa-angle-down rotate-icon"></i>
-                    </a>
-                    <div class="collapsible-body">  
-                        <ul>
-                            <li>
-                                <a href="/tribunales" class="waves-effect">Tribunales</a>
-                            </li>
-                            <li>
-                                <a href="/renuncia" class="collapsible-header waves-effect arrow-r">
-                                Renuncia Tribunal
-                                </a>
-                            </li>
-                        </ul>
-                    </div>  
-                </li>
-                <li>
-                    <a class="collapsible-header waves-effect arrow-r" href="/estudiante">
-                    <i class="fa fa-graduation-cap"></i>
-                            Estudiantes
-                    </a>
-                </li>
                 <hr class="white">
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
