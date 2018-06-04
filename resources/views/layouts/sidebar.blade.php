@@ -41,7 +41,12 @@
                     <div class="collapsible-body">
                         <ul class="collapsible collapsible-accordion">
                             <li>
+                                <a class="collapsible-header waves-effect arrow-r" href="/buscador">
+                                <i class="fa fa-search"></i>
+                                    Buscar Cursos
+                                </a>
                                 <a href="/inscribir" class="waves-effect">Inscribirse a un Curso</a>
+
                             </li>
                             <li>
                                 <a href="/misCursos" class="waves-effect">Cursos inscrito</a>
