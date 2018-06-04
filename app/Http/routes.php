@@ -23,3 +23,4 @@ Route::group(['middleware' => 'auth'], function () {
 });
 Route::get('/crearCurso','cursoController@index');
 Route::resource('/inscribir', 'cursoController@obtenerCurso');
+Route::resource('/misCursos', 'cursoController@listaMisCursos');

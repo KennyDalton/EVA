@@ -44,6 +44,9 @@
                                 <a href="/inscribir" class="waves-effect">Inscribirse a un Curso</a>
                             </li>
                             <li>
+                                <a href="/misCursos" class="waves-effect">Cursos inscrito</a>
+                            </li>
+                            <li>
                                 <a class="collapsible-header waves-effect arrow-r">Curso 1
                                 <i class="fa fa-angle-down rotate-icon"></i>
                                 </a>
