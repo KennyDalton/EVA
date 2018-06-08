@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-	<h1 align="center">CURSO</h1>
+	<h1 align="center">Modulo</h1>
 
 
 <!-- Card -->

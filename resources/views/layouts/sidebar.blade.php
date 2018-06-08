@@ -40,28 +40,43 @@
                     </a>
                     <div class="collapsible-body">
                         <ul>
+                            @if(Auth()->user()->tipo=='docente')
                             <li>
                                 <a class="waves-effect" href="/crearCurso">
                                 <i class="fas fa-user"></i> Nuevo Curso
                                 </a>
                             </li>
+                            @endif
+                            @if(Auth()->user()->tipo!='docente')
                             <li>
                                 <a class="waves-effect" href="/buscador">
                                 <i class="fa fa-search"></i>
                                     Buscar Cursos
                                 </a>
                             </li>
+                            @endif
+                            @if(Auth()->user()->tipo!='docente')
                             <li>
                                 <a class="waves-effect" href="/misCursos">
                                 <i class="fa fa-search"></i> Curso Inscrito
                                 </a>
                             </li>
+                            @endif
+                            @if(Auth()->user()->tipo=='docente')
+                            <li>
+                                <a class="waves-effect" href="/misCursos">
+                                <i class="fa fa-search"></i> Cursos
+                                </a>
+                            </li>
+                            @endif
+                            @if(Auth()->user()->tipo!='docente')
                             <li>
                                 <a class="waves-effect" href="/inscribir">
                                 <i class="fa fa-search"></i> 
                                     Inscribirse a un Curso
                                 </a>
                             </li>
+                            @endif
                         </ul>
                     </div>
                 </li>

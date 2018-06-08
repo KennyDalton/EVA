@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
-<h1 align="center">Nuevo Curso</h1>
+<h1 align="center">Nuevo Diplomado</h1>
 <form>
     <div class="md-form col-md-6">
             <input type="text" class="form-control">
-            <label for="form1">Nombre Del Curso</label>
+            <label for="form1">Nombre Del Diplomado</label>
     </div>
     <div class="md-form col-md-6">
             <textarea type="text" class="form-control md-textarea" rows="3"></textarea>
@@ -17,7 +17,7 @@
     <div class="card">
     <div class="card-header unique-color lighten-1 white-text">Temas</div>
     <div class="card-body">
-        <h4 class="card-title">Temas de los Cursos</h4>
+        <h4 class="card-title">Temas de Diplomado</h4>
         <!-- <p class="card-text"></p> -->
         <!--Table-->
         <div>
@@ -69,7 +69,7 @@
        <div class="modal-content">
            <!--Header-->
            <div class="modal-header" style="background-color: blue">
-               <h3 class="heading lead" style="color: white">Temas del Curso</h3>
+               <h3 class="heading lead" style="color: white">Temas del Diplomado</h3>
               
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                <span aria-hidden="true" class="white-text">&times;</span>

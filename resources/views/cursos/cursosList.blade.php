@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
-		<h1 align="center">MIS CURSOS</h1>
+		<h1 align="center">Mis Diplomados</h1>
 		<div>
             <table class="table">
                 <!--Table head-->
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nombre Tema</th>
+                        <th>Nombre del Diplomado</th>
                         <th>Descripcion</th>
                         <th>Acciones</th>
                     </tr>
@@ -24,8 +24,10 @@
                         <td>
                         	<a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="ver Temas"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
 		                	<a class="btn-floating btn-sm btn-blue btn-modal-subirTarea" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/tareas"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @if(Auth()->user()->tipo=='docente')
                             <a class="btn-floating btn-sm btn-green btn-modal-AsignarTarea" data-toggle="tooltip" data-placement="top" title="Asignar Tareas" href="/crearTarea"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                             <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @endif
 		    				<!-- <a class="btn-floating btn-sm btn-pink btn-modal-delete" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-upload mt-2 ml-2 fa-lg"></i><i class="fas fa-upload"></i></a> -->
                         </td>
                     </tr>
@@ -36,8 +38,10 @@
                         <td>
                         	<a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="ver"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
 		                	<a class="btn-floating btn-sm btn-blue btn-modal-subirTarea" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/tareas"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @if(Auth()->user()->tipo=='docente')
                             <a class="btn-floating btn-sm btn-green btn-modal-AsignarTarea" data-toggle="tooltip" data-placement="top" title="Asignar Tareas" href="/crearTarea"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                             <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @endif
 		    				<!-- <a class="btn-floating btn-sm btn-pink btn-modal-delete" data-toggle="tooltip" data-placement="top" title="eliminar"><i class="fa fa-trash mt-2 ml-2 fa-lg"></i></a> -->
                         </td>
                     </tr>
@@ -48,8 +52,11 @@
                         <td>
                         	<a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="ver"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
 		                	<a class="btn-floating btn-sm btn-blue btn-modal-subirTarea" data-toggle="tooltip" data-placement="top" title="Subir Tareas" href="/tareas"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @if(Auth()->user()->tipo=='docente')
                             <a class="btn-floating btn-sm btn-green btn-modal-AsignarTarea" data-toggle="tooltip" data-placement="top" title="Asignar Tareas" href="/crearTarea"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                             <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                            @endif
+
 		    				<!-- <a class="btn-floating btn-sm btn-pink btn-modal-delete" data-toggle="tooltip" data-placement="top" title="eliminar"><i class="fa fa-trash mt-2 ml-1 fa-lg"></i></a> -->
                         </td>
                     </tr>
