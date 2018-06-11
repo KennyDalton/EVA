@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-	<h1 align="center">Modulo</h1>
+	<h1 align="center">CURSO</h1>
 
 
 <!-- Card -->
@@ -17,7 +17,7 @@
 
             <div class="md-form form-group">
                 <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="2" disabled>{{$curso[0]->descripcion}}</textarea>
                 <label for="materialFormCardConfirmEx" class=""></label>
             </div>
 

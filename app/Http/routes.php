@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/home','HomeController@index');
 	Route::get('/crearCurso','CursoController@index');
 	Route::get('/buscador','CursoController@buscador');
-	Route::resource('/inscribir', 'CursoController@obtenerCurso');
+	Route::resource('/inscribir/{id}', 'CursoController@obtenerCurso');
 	Route::resource('/misCursos', 'CursoController@listaMisCursos');
 	Route::get('/tareas','CursoController@tareas');
 	Route::get('/subirDocumento','CursoController@subirDocumento');

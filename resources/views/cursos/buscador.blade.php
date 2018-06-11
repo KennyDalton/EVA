@@ -17,7 +17,20 @@
 	        </thead>
 	        
 	        <tbody id="datosTabla">
-	            <tr>
+
+	        	@foreach($cursos as $curso)
+
+	        	<tr data-id="{{$curso->idCurso}}">
+	        		<td style="width: 70%">
+	        			{{$curso->nombreCurso}},
+	        		</td>
+	        		<td style="width: 30%" class="text-center">
+	        			<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Inscribirse" href="/inscribir/{{$curso->idCurso}}"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
+	        		</td>
+	        	</tr>
+
+	        	@endforeach
+	            <!--<tr>
 	                <td style="width: 70%">
 	                    Ingeniería Software
 	                </td>
@@ -56,7 +69,7 @@
 	                <td style="width: 30%" class="text-center">
 	                	<a class="btn-floating btn-sm btn-blue btn-modal-enrollin" data-toggle="tooltip" data-placement="top" title="Subir Tareas href="/inscribir"><i class="fas fa-sign-in-alt mt-2 ml-1 fa-lg"></i></a>
 	                </td>
-	            </tr>
+	            </tr>-->
 	        </tbody>
 	    </table>
 	</div>
