@@ -42,17 +42,24 @@ class cursoController extends Controller
 
     public function buscador()
     {
-        return view('cursos.buscador');
+        $cursos = curso::orderby('nombreCurso','asc')->get();
+        //->where('clasificacion','area')
+        
+        return view('cursos.buscador', compact('cursos'));
     }
-    public function obtenerCurso()
+    public function obtenerCurso($id)
     {
-        return view('cursos.register');
+        $curso = curso::where('curso.idCurso', $id)
+        ->groupby('curso.idCurso')
+        ->get();
+
+        //dd($curso[0]->descripcion);
+        return view('cursos.register',compact('curso'));
     }
     public function store(Request $request)
     {
 
         $mytime = Carbon::now();
-        
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
