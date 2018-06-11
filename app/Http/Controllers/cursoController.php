@@ -8,8 +8,10 @@ use App\Curso_Usuario;
 use App\Curso;
 use Auth;
 use App\Tema;
+use \Carbon\Carbon;
 
 use App\Http\Controllers\Controller;
+
 class cursoController extends Controller
 {
     /**
@@ -49,8 +51,8 @@ class cursoController extends Controller
     public function store(Request $request)
     {
 
-        $mytime = \Carbon\Carbon::now();
-        //dd($request->mytime);
+        $mytime = Carbon::now();
+        dd($request->mytime);
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
