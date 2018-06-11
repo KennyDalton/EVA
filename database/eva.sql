@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2018 at 06:19 PM
+-- Generation Time: Jun 11, 2018 at 09:25 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -106,7 +106,7 @@ CREATE TABLE `tema` (
   `nombreTema` varchar(60) NOT NULL,
   `descripcionTema` text NOT NULL,
   `contenido` text,
-  `idCurso` int(11) NOT NULL
+  `idCurso` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -209,12 +209,17 @@ ALTER TABLE `carrera`
 -- AUTO_INCREMENT for table `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3307;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3318;
 --
 -- AUTO_INCREMENT for table `tarea`
 --
 ALTER TABLE `tarea`
   MODIFY `idTarea` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tema`
+--
+ALTER TABLE `tema`
+  MODIFY `idTema` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
