@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="collapsible-header waves-effect arrow-r">
+                    <a class="collapsible-header waves-effect arrow-r" href="/calendario">
                     <i class="fas fa-user"></i>Calendario
                     </a>
                 </li>
