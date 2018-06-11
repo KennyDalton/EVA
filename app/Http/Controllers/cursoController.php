@@ -52,23 +52,23 @@ class cursoController extends Controller
     {
 
         $mytime = Carbon::now();
-        dd($request->mytime);
+        
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
             'objetivosDip' => 'required|String',
-            'codigoCurso' => 'required|String',
+            'codigoDip' => 'required|String',
+        ]);
+        Curso::create([
+            'nombreCurso' => $request['nombreDip'],
+            'objetivos' => $request['objetivosDip'],
+            'descripcion' => $request['descripcionDip'],
+            'codigoCurso' => $request['codigoDip'],
+            'fechaCreacion' => $mytime,
         ]);
         
-        Curso::create([
-            'nombreCurso' => $request->nombreDip,
-            'objetivos' => $request->objetivosDip,
-            'descripcion' => $request->descripcionDip,
-            'codigoCurso' => $request->codigoDip,
-            'fechaCreacion' => $request->mytime,
-            'fechaCreacion' => NULL,
-        ]);
-        return "Creado Exitosamente";
+        return redirect('/crearDiplomado');
+        
     }
     public function listaMisCursos()
     {

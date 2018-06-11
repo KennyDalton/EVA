@@ -35,7 +35,7 @@
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
                     <i class="fa fa-university"></i>
-                        Mis cursos
+                        Mis Diplomados
                         <i class="fa fa-angle-down rotate-icon"></i>
                     </a>
                     <div class="collapsible-body">
@@ -43,7 +43,7 @@
                             @if(Auth()->user()->tipo=='docente')
                             <li>
                                 <a class="waves-effect" href="/crearCurso">
-                                <i class="fas fa-user"></i> Nuevo Curso
+                                <i class="fas fa-user"></i> Nuevo Diplomado
                                 </a>
                             </li>
                             @endif
@@ -51,21 +51,21 @@
                             <li>
                                 <a class="waves-effect" href="/buscador">
                                 <i class="fa fa-search"></i>
-                                    Buscar Cursos
+                                    Buscar Diplomado
                                 </a>
                             </li>
                             @endif
                             @if(Auth()->user()->tipo!='docente')
                             <li>
                                 <a class="waves-effect" href="/misCursos">
-                                <i class="fa fa-search"></i> Curso Inscrito
+                                <i class="fa fa-search"></i> Diplomado Inscrito
                                 </a>
                             </li>
                             @endif
                             @if(Auth()->user()->tipo=='docente')
                             <li>
                                 <a class="waves-effect" href="/misCursos">
-                                <i class="fa fa-search"></i> Cursos
+                                <i class="fa fa-search"></i> Diplomados
                                 </a>
                             </li>
                             @endif
@@ -73,14 +73,14 @@
                             <li>
                                 <a class="waves-effect" href="/inscribir">
                                 <i class="fa fa-search"></i> 
-                                    Inscribirse a un Curso
+                                    Inscribirse a un Diplomado
                                 </a>
                             </li>
                             @endif
                         </ul>
                     </div>
                 </li>
-                <hr class="white">
+                <hr class="wDiplomados
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
                         <i class="fa fa-envelope-o"></i> 

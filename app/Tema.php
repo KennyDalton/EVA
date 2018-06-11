@@ -8,7 +8,7 @@ class Tema extends Model
 {
     protected $table = 'tema';
     protected $primaryKey = 'idTema';
-    protected $fillable = ['nombreTema','descripcion','contenido','idCurso'];
+    protected $fillable = ['nombreTema','descripcionTema','contenido','idCurso'];
     //ya no guarda el created_at, updated_at 
     public $timestamps = false;
 
