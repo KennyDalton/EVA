@@ -2,18 +2,27 @@
 @section('content')
 
 <h1 align="center">Nuevo Diplomado</h1>
-<form>
+<form action="{{url('/crearDiplomado')}}" method="POST" id="miForm">
+  {{csrf_field()}}
     <div class="md-form col-md-6">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="nombreDip">
             <label for="form1">Nombre Del Diplomado</label>
     </div>
-    <div class="md-form col-md-6">
-            <textarea type="text" class="form-control md-textarea" rows="3"></textarea>
-            <label for="form1">Descripcion</label>
-    </div><div class="md-form col-md-6">
-            <input type="text" class="form-control">
-            <label for="form1">Codigo</label>
+    <div class="row">
+      <div class="md-form col-md-6">
+              <textarea type="text" class="form-control md-textarea" rows="3" name="objetivosDip"></textarea>
+              <label for="form1">Objetivos</label>
+      </div>
+      <div class="md-form col-md-6">
+              <textarea type="text" class="form-control md-textarea" rows="3" name="descripcionDip"></textarea>
+              <label for="form1">Descripcion</label>
+      </div>
     </div>
+      <div class="md-form col-md-6">
+              <input type="text" class="form-control" name="codigoDip">
+              <label for="form1">Codigo</label>
+      </div>
+    <div class="row"><label class="col-md-4"></label><button class="btn btn-indigo col-md-4" type="submit"> Crear Curso y Asignar temas</button></div>
     <div class="card">
     <div class="card-header unique-color lighten-1 white-text">Temas</div>
     <div class="card-body">
@@ -35,24 +44,14 @@
 
                 <!--Table body-->
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                  @foreach($temas as $tema)
+                    <tr data-id='{{ $tema->idTema }}'>
+                        <th scope="row"> {{ $tema->idTema }} </th>
+                        <td> {{ $tema->nombreTema }} </td>
+                        <td> {{ $tema->descripcion }} </td>
+                        <td> {{ $tema->contenido }} </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                  @endforeach
                 </tbody>
                 <!--Table body-->
             </table>
@@ -111,8 +110,8 @@
                    <div class="col-md-6">
                        <!-- Material input -->
                        <div class="md-form form-group">
-                           <input type="email" class="form-control validate" id="contenido" placeholder="Email">
-                           <label for="email">Contenido</label>
+                           <input type="text" class="form-control" id="contenido" placeholder="Contenido">
+                           <label>Contenido</label>
                        </div>
                    </div>
                    <!-- Grid column -->

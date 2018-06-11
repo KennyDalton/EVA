@@ -99,36 +99,6 @@
                                     Write a message
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    Write a message
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    Write a message
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                                    Write a message
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </li>

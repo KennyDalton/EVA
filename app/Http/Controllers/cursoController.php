@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Curso_Usuario;
+use App\Curso;
+use Auth;
+use App\Tema;
 
+use App\Http\Controllers\Controller;
 class cursoController extends Controller
 {
     /**
@@ -22,9 +27,15 @@ class cursoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        return view('cursos.createCurso');
+        $idUser = Auth::user()->id;
+        $temas = Curso_Usuario::where('curso_usuario.id',$idUser)
+        ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
+        ->join('tema','curso.idCurso', '=', 'tema.idCurso')
+        ->get(); 
+        return view('cursos.createCurso', compact(['temas']));
     }
 
     public function buscador()
@@ -35,20 +46,46 @@ class cursoController extends Controller
     {
         return view('cursos.register');
     }
+    public function store(Request $request)
+    {
 
-    public function listaMisCursos(){
-
-        return view('cursos.cursosList');
+        $mytime = \Carbon\Carbon::now();
+        //dd($request->mytime);
+        $this->validate($request, [
+            'nombreDip' => 'required|String',
+            'descripcionDip' => 'required|String',
+            'objetivosDip' => 'required|String',
+            'codigoCurso' => 'required|String',
+        ]);
+        
+        Curso::create([
+            'nombreCurso' => $request->nombreDip,
+            'objetivos' => $request->objetivosDip,
+            'descripcion' => $request->descripcionDip,
+            'codigoCurso' => $request->codigoDip,
+            'fechaCreacion' => $request->mytime,
+            'fechaCreacion' => NULL,
+        ]);
+        return "Creado Exitosamente";
     }
-    public function tareas(){
-
+    public function listaMisCursos()
+    {
+        $idUser = Auth::user()->id;
+        $cursos = Curso_Usuario::where('curso_usuario.id',$idUser)
+        ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
+        ->get();
+        return view('cursos.cursosList', compact(['cursos']));
+    }
+    public function tareas()
+    {
         return view('cursos.tareas');
     }
     public function subirDocumento(){
 
         return view('cursos.subirDocumento');
     }
-    public function crearTarea(){
+    public function crearTarea()
+    {
 
         return view('cursos.crearTareas');
     }
