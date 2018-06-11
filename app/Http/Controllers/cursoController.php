@@ -91,4 +91,9 @@ class cursoController extends Controller
 
         return view('cursos.crearTareas');
     }
+
+    public function calendario()
+    {
+        return view('cursos.calendario');
+    }
 }

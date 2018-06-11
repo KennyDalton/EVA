@@ -64,6 +64,9 @@
         <a class="btn btn-info" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Tema</font></a>
     </div>
     </div>
+    <div class="row"><label class="col-md-4"></label><button class="btn btn-indigo col-md-4" type="submit"> Crear Diplomado y Asignar temas</button>
+    </div>
+    <div class="card">
 </form>
 <!-- Modal agregar y modificar estudiante -->
 <div class="modal fade" id="modal-temas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

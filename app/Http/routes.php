@@ -29,4 +29,5 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('/crearDiplomado','CursoController');
 
 	Route::resource('/crearTema','TemaController');
+	Route::get('/calendario', 'CursoController@calendario');
 });

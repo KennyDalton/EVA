@@ -18,3 +18,6 @@
 
 <!-- Css de Fer -->
 <link href="{{ asset('css/fer.min.css') }}" rel="stylesheet">
+
+<!-- Css de Fer -->
+<link href="{{ asset('css/fer.min.css') }}" rel="stylesheet">
