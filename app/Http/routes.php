@@ -27,5 +27,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/subirDocumento','CursoController@subirDocumento');
 	Route::get('/crearTarea','CursoController@crearTarea');
 	Route::resource('/crearDiplomado','CursoController');
+	
 	Route::get('/calendario', 'CursoController@calendario');
 });
