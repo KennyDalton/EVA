@@ -40,6 +40,7 @@ class TemaController extends Controller
     {
 
         //$id = Curso::max('idCurso');
+        
         $this->validate($request, [
             'nombreTema' => 'required|string',
             'descripcion' => 'required|string',
@@ -49,7 +50,7 @@ class TemaController extends Controller
             'nombreTema' => $request['nombreTema'],
             'descripcionTema' => $request['descripcion'],
             'contenido' => $request['contenido'],
-            'idCurso' => $request['idcursoactual'],
+            'idCurso' => $request['idCursoActual'],
         ]);
         return response()->json([
             'message' => 'Se agrego correctamente!',
@@ -57,9 +58,10 @@ class TemaController extends Controller
     }
     public function showModules($id)
     {
+        $aux = $id;
         $modulos = Tema::where('idCurso',$id)
         ->get();
-        return view('cursos.modulos',compact(['modulos']));
+        return view('cursos.modulos',compact(['modulos','aux']));
     }
     /**
      * Display the specified resource.

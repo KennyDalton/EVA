@@ -23,7 +23,6 @@
 
         <!--Table body-->
         <tbody>
-          @if($modulos->count()!=0)
             @foreach($modulos as $modulo)
               <tr data-id='{{ $modulo->idTema }}'>
                   <th scope="row"> {{ $modulo->idTema }} </th>
@@ -32,19 +31,9 @@
                   <td> {{ $modulo->contenido }} </td>
                   <td>
                     <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Tareas" href="/tareas/{{ $modulo->idCurso }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
-                            
                   </td>
               </tr>
             @endforeach
-          @elseif($modulos->count()==0)
-            <tr>
-              <th>hola</th>
-              <td>hola</td>
-              <td>hola</td>
-              <td>hola</td>
-              <td>hola</td>
-            </tr>
-          @endif
 
         </tbody>
         <!--Table body-->
@@ -133,7 +122,7 @@
              'nombreTema': $('#idnombreTema').val(),
              'descripcion': $('#iddescrip').val(),
              'contenido': $('#idcontenido').val(),
-             'idcursoactual':'{{$modulos[0]->idCurso}}', 
+             'idCursoActual':'{{$aux}}',
          },
            success : function(data) {
                toastr.success(data.message);
