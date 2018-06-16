@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+{{ csrf_field() }}
 <h1 align="center">Tareas</h1>
 <div class="row">
   <h2 class="col-md-8">Tareas Entregadas</h2>
@@ -10,10 +11,9 @@
         <!--Table head-->
         <thead>
             <tr>
-                <th>#</th>
-                <th>Nombre del Archivo</th>
                 <th>Descripcion</th>
-                <th>Fecha de Entrega</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
             </tr>
         </thead>
       <!--Table head-->
@@ -22,10 +22,9 @@
         <tbody>
             @foreach($tareas as $tarea)
               <tr data-id='{{ $tarea->idTarea }}'>
-                  <th scope="row"> {{ $tarea->idTarea }} </th>
-                  <td> {{ $tarea->documento }} </td>
                   <td> {{ $tarea->descripcion }} </td>
-                  <td> {{ $tarea->fechaEntrega }} </td>
+                  <td> {{ $tarea->fechaInicio }} </td>
+                  <td> {{ $tarea->fechaFin }} </td>
               </tr>
             @endforeach
         </tbody>
@@ -48,40 +47,23 @@
            <!--Body-->
            <div class="modal-body">
                <!-- Grid row -->
-               <div class="form-row">
-                   <!-- Grid column -->
-                   <div class="col-md-6">
-                       <!-- Material input -->
-                        <div class="file-field">
-                  <div class="btn btn-rounded aqua-gradient btn-sm float-left">
-                      <span>Seleccione el Archivo</span>
-                      <input type="file">
-                  </div>
-                  <div class="file-path-wrapper">
-                     <input class="file-path validate" type="text" placeholder="">
-                  </div>
-              </div>
-                   </div>
-                   <!-- Grid column -->
-               </div>
-               <!-- Grid row -->
-               <div class="md-form col-md-6">
-                <input type="text" class="form-control">
-                <label for="form1">Nombre</label>
-          </div>  
-               <!-- Grid row -->
                <div class="row">
                    <!-- Grid column -->
                    <div class="col-md-6">
                        <!-- Material input -->
                        <div class="md-form form-group">
-                           <textarea type="text" class="form-control md-textarea" rows="3" id="descrip"></textarea>
+                           <textarea type="text" class="form-control md-textarea" rows="3" name="descrip" id="descrip"></textarea>
                            <label for="ci">Descripcion</label>
                        </div>
                    </div>
                    <!-- Grid column -->
                </div>
                <!-- Grid row -->
+               <div class='col-md-4'>
+                   <input placeholder="Fecha Fin del Trabajo" type="text" name="fechaFin" class="form-control datepicker" id="fechaFin">
+               </div>
+               <!-- Grid row -->
+
            </div>
           
            <!--Footer-->
@@ -92,27 +74,27 @@
 @endsection
 @section('script')
   <script type="text/javascript">
-   //  $(document).on('click', '#add', function(e) {
-   //     e.preventDefault();
-   //     $.ajax({
-   //         type: 'POST',
-   //         url: '/crearTarea',
-   //         data: {
-   //           '_token': $('input[name=_token]').val(),
-   //           'fechaIni': $('#nombreTema').val(),
-   //           'fechafin': $('#descrip').val(),
-   //           'descripcion': $('#contenido').val(),
-   //           'idTema': $('#contenido').val(),
-   //       },
-   //         success : function(data) {
-   //             toastr.success(data.message);
-   //             console.log(data);
+    $(document).on('click', '#add', function(e) {
+       e.preventDefault();
+       $.ajax({
+           type: 'POST',
+           url: '/crearTarea',
+           data: {
+             '_token': $('input[name=_token]').val(),
+             'fechafin': $('#fechaFin').val(),
+             'descripcion': $('#descrip').val(),
+             'idTema': '{{$id}}',
+         },
+           success : function(data) {
+               toastr.success(data.message);
+               location.reload();
+               console.log(data);
 
-   //         },
-   //         error : function(xhr, status) {
-   //             toastr.error('Disculpe, existio un problema!');
-   //         },
-   //     });
-   // });
+           },
+           error : function(xhr, status) {
+               toastr.error('Disculpe, existio un problema!');
+           },
+       });
+   });
   </script>
 @endsection

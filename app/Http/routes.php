@@ -26,7 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/modulos/{id}','TemaController@showModules');
 	Route::get('/tareas/{id}','TareaController@tareas');
 	Route::get('/subirDocumento','CursoController@subirDocumento');
-	Route::get('/crearTarea','CursoController@crearTarea');
+	Route::resource('/crearTarea','TareaController');
 	Route::resource('/crearDiplomado','CursoController');
 
 	Route::resource('/crearTema','TemaController');
