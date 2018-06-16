@@ -51,7 +51,7 @@
                             <li>
                                 <a class="waves-effect" href="/buscador">
                                 <i class="fa fa-search"></i>
-                                    Buscar Diplomado
+                                    Inscribirse a un Diplomado
                                 </a>
                             </li>
                             @endif
@@ -66,14 +66,6 @@
                             <li>
                                 <a class="waves-effect" href="/misCursos">
                                 <i class="fa fa-search"></i> Diplomados
-                                </a>
-                            </li>
-                            @endif
-                            @if(Auth()->user()->tipo!='docente')
-                            <li>
-                                <a class="waves-effect" href="/inscribir">
-                                <i class="fa fa-search"></i> 
-                                    Inscribirse a un Diplomado
                                 </a>
                             </li>
                             @endif

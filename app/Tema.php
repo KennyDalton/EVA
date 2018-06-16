@@ -12,9 +12,13 @@ class Tema extends Model
     //ya no guarda el created_at, updated_at 
     public $timestamps = false;
 
-    public function tema()
+    public function tarea()
     {
         return $this->hasMany('App\Tarea', 'idTema', 'idTema');
+    }
+    public function documento()
+    {
+        return $this->hasMany('App\Documeto', 'idTema', 'idTema');
     }
     public function curso()
     {

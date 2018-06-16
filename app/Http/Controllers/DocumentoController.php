@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Tema;
-use App\Curso;
-
-class TemaController extends Controller
+use App\Documento;
+class DocumentoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,6 +18,12 @@ class TemaController extends Controller
         //
     }
 
+    public function subirDocumento($id){
+        $id = $id;
+        $documentos = Documento::where('idTema',$id)
+        ->get();
+        return view('cursos.subirDocumento',compact(['id','documentos']));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -38,30 +42,15 @@ class TemaController extends Controller
      */
     public function store(Request $request)
     {
-
-        //$id = Curso::max('idCurso');
-        
-        $this->validate($request, [
-            'nombreTema' => 'required|string',
-            'descripcion' => 'required|string',
-            'contenido' => 'required|string',
-        ]);
-        Tema::create([
-            'nombreTema' => $request['nombreTema'],
-            'descripcionTema' => $request['descripcion'],
-            'contenido' => $request['contenido'],
-            'idCurso' => $request['idCursoActual'],
+        Documento::create([
+            'nombreDoc' => $request['nombreDoc'],
+            'descripciondoc' => $request['descripcionDoc'],
+            'archivo' => $request['archivo'],
+            'idTema' => $request['idTema'],
         ]);
         return response()->json([
             'message' => 'Se agrego correctamente!',
         ]);
-    }
-    public function showModules($id)
-    {
-        $aux = $id;
-        $modulos = Tema::where('idCurso',$id)
-        ->get();
-        return view('cursos.modulos',compact(['modulos','aux']));
     }
 
     /**
