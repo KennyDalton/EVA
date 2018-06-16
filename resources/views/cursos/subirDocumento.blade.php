@@ -3,7 +3,7 @@
 {{ csrf_field() }}
 	<h1 align="center">Subir Documento</h1>
 <div>
-	<table class="table table-striped">
+	<table class="table table-striped table-bordered">
         <!--Table head-->
         <thead>
             <tr>
@@ -26,7 +26,7 @@
         <!--Table body-->
     </table>
 </div>
-<hr>
+<hr class="">
 
   <form>
 		<div class="md-form col-md-6">

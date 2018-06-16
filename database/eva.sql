@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2018 at 09:25 PM
+-- Generation Time: Jun 17, 2018 at 12:29 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -31,6 +31,16 @@ CREATE TABLE `carrera` (
   `nombreCarrera` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `carrera`
+--
+
+INSERT INTO `carrera` (`idCarrera`, `nombreCarrera`) VALUES
+(1, 'Ing.Sistemas'),
+(2, 'Ing.Informatica'),
+(3, 'Ing.Civil'),
+(4, 'Ing.Electrica');
+
 -- --------------------------------------------------------
 
 --
@@ -46,16 +56,6 @@ CREATE TABLE `curso` (
   `fechaCreacion` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `curso`
---
-
-INSERT INTO `curso` (`idCurso`, `nombreCurso`, `objetivos`, `descripcion`, `codigoCurso`, `fechaCreacion`) VALUES
-(3303, 'Introduccion a la Programacion', 'objetivo 1\r\nobjetivo 2\r\nobjetivo 3\r\nobjetivo 4\r\nobjetivo 5\r\nobjetivo 6', 'Materia troncal de las carreras informatica Sistemas', 'Intro', '2018-06-10'),
-(3304, 'Elementos de Programacion', 'objetivo 1\r\nobjetivo 2\r\nobjetivo 3\r\nobjetivo 4\r\nobjetivo 5\r\nobjetivo 6', 'Materia troncal de las carreras informatica Sistemas', 'Elementos', '2018-06-10'),
-(3305, 'Taller de Programacion', 'Objetivo 1\r\nObjetivo 2\r\nObjetivo 3\r\nObjetivo 4\r\n', 'Aplicacion de conocimientos', 'TallerProgra', '2018-06-10'),
-(3306, 'Calculo 1', 'Objetivo 1\r\nObjetivo 2\r\nObjetivo 3\r\nObjetivo 4\r\nObjetivo 5', 'Calculos de integrales y derivadas', 'Calculo1', '2018-06-10');
-
 -- --------------------------------------------------------
 
 --
@@ -67,16 +67,19 @@ CREATE TABLE `curso_usuario` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `curso_usuario`
+-- Table structure for table `documento`
 --
 
-INSERT INTO `curso_usuario` (`idCurso`, `id`) VALUES
-(3304, 6),
-(3306, 6),
-(3305, 6),
-(3305, 7),
-(3306, 7);
+CREATE TABLE `documento` (
+  `idDoc` int(11) NOT NULL,
+  `nombreDoc` varchar(75) NOT NULL,
+  `descripcionDoc` text,
+  `archivo` text,
+  `idTema` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -90,7 +93,7 @@ CREATE TABLE `tarea` (
   `fechaFin` date NOT NULL,
   `descripcion` text,
   `idTema` int(11) NOT NULL,
-  `fechaEntrega` text,
+  `fechaEntrega` date DEFAULT NULL,
   `documento` text,
   `estadoEntrega` enum('No entregada','Entregada') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -132,8 +135,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `lastname`, `tipo`) VALUES
-(6, 'Kenny', 'kennydaltonc@yahoo.com', '$2y$10$RotW6m9K3OeBO5AFTPgEb.0aoOFnkPPVSXJvoUfPSG7bJ/oveGvf6', '4eEIE3ZVtDNdb99ckBulC93kklgT2ehAvOeoR5U3G4fzmJvCPA6CdUVrIfqo', '2018-06-11 04:05:11', '2018-06-11 09:47:54', 'Dalton', 'docente'),
-(7, 'Pedro', 'Pereira.Pedro@gmail.com', '$2y$10$jK9P3kjOS6T28rVaw16j3uwvKI8MJntsHXoMtCnQhTPdNEn.MyXci', 'kyteWumeqFvCrRNk9xl3ft54MN2qrDxessfIBueAl8OU0icPlAJx25ZaZ1rB', '2018-06-11 09:48:41', '2018-06-11 09:55:16', 'Pereira', 'estudiante');
+(6, 'Kenny', 'kennydaltonc@yahoo.com', '$2y$10$RotW6m9K3OeBO5AFTPgEb.0aoOFnkPPVSXJvoUfPSG7bJ/oveGvf6', 'BtJN1a79kpwt8ydtfwS3oKS7yV1tqNNJpVtRGvENrX8yo7oWOtrkspZTaOUV', '2018-06-11 04:05:11', '2018-06-16 23:38:40', 'Dalton', 'docente'),
+(7, 'Pedro', 'Pereira.Pedro@gmail.com', '$2y$10$jK9P3kjOS6T28rVaw16j3uwvKI8MJntsHXoMtCnQhTPdNEn.MyXci', 'vgHEWDfOPcJAjFLV7waFGjLp6artoPd8zIZY2U3IGUyYKaTAN5Zdy0FJSf28', '2018-06-11 09:48:41', '2018-06-16 23:42:36', 'Pereira', 'estudiante'),
+(23, 'qqqqq', 'qqqqq@qq.com', '$2y$10$hZDCw7RxyphqcXArwwMo1e3CylGwF5Ng5yRbJxSVNY0HrggryDoqO', 'HqVtNB44dQWg59XyYv1b7tlM9Q9CWJxz7YC1H9anRMBbkDWWm7azxyDJNWwM', '2018-06-16 07:22:31', '2018-06-16 07:23:56', 'qqqqqq', 'docente'),
+(24, 'kkk', 'kkkkk@dsd.com', '$2y$10$j6XfywnGwNo.bSnzrIevBOrLsVC9iCNY4X7pSV8R4KKnpXXuAMfXm', NULL, '2018-06-16 07:24:40', '2018-06-16 07:24:40', 'kkkkk', 'docente');
 
 -- --------------------------------------------------------
 
@@ -170,6 +175,13 @@ ALTER TABLE `curso_usuario`
   ADD KEY `fk_curso_usuario_users1_idx` (`id`);
 
 --
+-- Indexes for table `documento`
+--
+ALTER TABLE `documento`
+  ADD PRIMARY KEY (`idDoc`),
+  ADD KEY `fk_documento_tema1_idx` (`idTema`);
+
+--
 -- Indexes for table `tarea`
 --
 ALTER TABLE `tarea`
@@ -204,27 +216,32 @@ ALTER TABLE `user_carrera`
 -- AUTO_INCREMENT for table `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `curso`
 --
 ALTER TABLE `curso`
   MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3318;
 --
+-- AUTO_INCREMENT for table `documento`
+--
+ALTER TABLE `documento`
+  MODIFY `idDoc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `tarea`
 --
 ALTER TABLE `tarea`
-  MODIFY `idTarea` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTarea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tema`
 --
 ALTER TABLE `tema`
-  MODIFY `idTema` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idTema` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- Constraints for dumped tables
 --
@@ -235,6 +252,12 @@ ALTER TABLE `users`
 ALTER TABLE `curso_usuario`
   ADD CONSTRAINT `fk_curso_usuario_curso1` FOREIGN KEY (`idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_curso_usuario_users1` FOREIGN KEY (`id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `documento`
+--
+ALTER TABLE `documento`
+  ADD CONSTRAINT `fk_documento_tema1` FOREIGN KEY (`idTema`) REFERENCES `tema` (`idTema`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `tarea`
