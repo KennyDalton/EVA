@@ -60,6 +60,8 @@ class cursoController extends Controller
     {
 
         $mytime = Carbon::now();
+        $idUser = Auth::user()->id;
+        $maxCurso = Curso::max('idCurso');
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
@@ -73,6 +75,10 @@ class cursoController extends Controller
             'codigoCurso' => $request['codigoDip'],
             'fechaCreacion' => $mytime,
         ]);
+        Curso_Usuario::create([
+            'id' => $idUser,
+            'idCurso' => $maxCurso,
+        ]);
         
         return redirect('/crearDiplomado');
         
@@ -83,12 +89,11 @@ class cursoController extends Controller
         $cursos = Curso_Usuario::where('curso_usuario.id',$idUser)
         ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
         ->get();
+        // $tareas = Tarea::where()
+        // ->get();
         return view('cursos.cursosList', compact(['cursos']));
     }
-    public function tareas()
-    {
-        return view('cursos.tareas');
-    }
+
     public function subirDocumento(){
 
         return view('cursos.subirDocumento');

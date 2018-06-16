@@ -5,16 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Tarea;
 use App\Tema;
-use App\Curso;
-
-class TemaController extends Controller
+class TareaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function tareas($id)
+    {
+        $tareas = Tarea::join('tema','tarea.idTema','=','tema.idTema')
+        ->where('tema.idCurso',$id)
+        ->get();
+        return view('cursos.crearTareas',compact(['id','tareas']));
+    }
     public function index()
     {
         //
@@ -38,29 +44,9 @@ class TemaController extends Controller
      */
     public function store(Request $request)
     {
+        //
+    }
 
-        //$id = Curso::max('idCurso');
-        $this->validate($request, [
-            'nombreTema' => 'required|string',
-            'descripcion' => 'required|string',
-            'contenido' => 'required|string',
-        ]);
-        Tema::create([
-            'nombreTema' => $request['nombreTema'],
-            'descripcionTema' => $request['descripcion'],
-            'contenido' => $request['contenido'],
-            'idCurso' => $request['idcursoactual'],
-        ]);
-        return response()->json([
-            'message' => 'Se agrego correctamente!',
-        ]);
-    }
-    public function showModules($id)
-    {
-        $modulos = Tema::where('idCurso',$id)
-        ->get();
-        return view('cursos.modulos',compact(['modulos']));
-    }
     /**
      * Display the specified resource.
      *
