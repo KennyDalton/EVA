@@ -60,23 +60,28 @@ class cursoController extends Controller
     {
 
         $mytime = Carbon::now();
-        //dd($mytime);
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
             'objetivosDip' => 'required|String',
-            'codigoCurso' => 'required|String',
+            'codigoDip' => 'required|String',
+        ]);
+        Curso::create([
+            'nombreCurso' => $request['nombreDip'],
+            'objetivos' => $request['objetivosDip'],
+            'descripcion' => $request['descripcionDip'],
+            'codigoCurso' => $request['codigoDip'],
+            'fechaCreacion' => $mytime,
+        ]);
+        $idUser = Auth::user()->id;
+        $maxCurso = Curso::max('idCurso');
+        Curso_Usuario::create([
+            'id' => $idUser,
+            'idCurso' => $maxCurso,
         ]);
         
-        Curso::create([
-            'nombreCurso' => $request->nombreDip,
-            'objetivos' => $request->objetivosDip,
-            'descripcion' => $request->descripcionDip,
-            'codigoCurso' => $request->codigoDip,
-            'fechaCreacion' => $request->mytime,
-            'fechaCreacion' => NULL,
-        ]);
-        return "Creado Exitosamente";
+        return redirect('/crearDiplomado');
+        
     }
     public function listaMisCursos()
     {
@@ -84,12 +89,11 @@ class cursoController extends Controller
         $cursos = Curso_Usuario::where('curso_usuario.id',$idUser)
         ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
         ->get();
+        // $tareas = Tarea::where()
+        // ->get();
         return view('cursos.cursosList', compact(['cursos']));
     }
-    public function tareas()
-    {
-        return view('cursos.tareas');
-    }
+
     public function subirDocumento(){
 
         return view('cursos.subirDocumento');

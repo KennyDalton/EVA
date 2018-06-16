@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/registerk','Auth\AuthController@carreras');
 Route::auth();
 Route::group(['middleware' => 'auth'], function () {
 	route::get('/index','viewController@index');
@@ -23,10 +23,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/buscador','CursoController@buscador');
 	Route::get('/inscribir/{id}', 'CursoController@obtenerCurso');
 	Route::get('/misCursos', 'CursoController@listaMisCursos');
-	Route::get('/tareas','CursoController@tareas');
+	Route::get('/modulos/{id}','TemaController@showModules');
+	Route::get('/tareas/{id}','TareaController@tareas');
 	Route::get('/subirDocumento','CursoController@subirDocumento');
 	Route::get('/crearTarea','CursoController@crearTarea');
 	Route::resource('/crearDiplomado','CursoController');
-	
+
+	Route::resource('/crearTema','TemaController');
 	Route::get('/calendario', 'CursoController@calendario');
 });

@@ -31,6 +31,13 @@
                             <option value="docente">Docente</option>
                             </select>
                         </div>
+                        <div class="col-md-6">
+                            <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="carrera" id="carrera">
+                                @foreach($carreras as $carrera)
+                                    <option value="{{ $carrera->idCarrera }}">{{ $carrera->nombreCarrera }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         </div>
                         <div class="md-form {{ $errors->has('name') ? 'has-error' : '' }}">
                             <input type="text" id="name" class="form-control" name="name">

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tareas extends Model
+class Tarea extends Model
 {
     protected $table = 'tarea';
     protected $primaryKey = 'idTarea';
