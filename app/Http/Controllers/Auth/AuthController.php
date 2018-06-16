@@ -7,7 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-
+use App\Carrera;
+use App\User_Carrera;
 class AuthController extends Controller
 {
     /*
@@ -64,6 +65,8 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+
+        $id = User::max('id');
         return User::create([
             'name' => $data['name'],
             'lastname' => $data['lastname'],
@@ -71,5 +74,15 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        User_Carrera::create([
+            'id' => $id,
+            'idCarrera' => $data['carrera'],
+        ]);
+
+    }
+    public function carreras()
+    {
+        $carreras = Carrera::get();
+        return view('auth.register',compact(['carreras']));
     }
 }

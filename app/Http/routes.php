@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/registerk','Auth\AuthController@carreras');
 Route::auth();
 Route::group(['middleware' => 'auth'], function () {
 	route::get('/index','viewController@index');

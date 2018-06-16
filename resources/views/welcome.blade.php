@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('register')}}" class="nav-link border border-light rounded">
+                            <a href="/registerk" class="nav-link border border-light rounded">
                                 <i class="fas fa-user-plus fa-lg"></i>Registrarse
                             </a>
                         </li>

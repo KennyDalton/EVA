@@ -60,8 +60,6 @@ class cursoController extends Controller
     {
 
         $mytime = Carbon::now();
-        $idUser = Auth::user()->id;
-        $maxCurso = Curso::max('idCurso');
         $this->validate($request, [
             'nombreDip' => 'required|String',
             'descripcionDip' => 'required|String',
@@ -75,6 +73,8 @@ class cursoController extends Controller
             'codigoCurso' => $request['codigoDip'],
             'fechaCreacion' => $mytime,
         ]);
+        $idUser = Auth::user()->id;
+        $maxCurso = Curso::max('idCurso');
         Curso_Usuario::create([
             'id' => $idUser,
             'idCurso' => $maxCurso,
