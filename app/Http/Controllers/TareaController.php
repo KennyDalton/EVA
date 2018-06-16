@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Tarea;
 use App\Tema;
+use \Carbon\Carbon;
 class TareaController extends Controller
 {
     /**
@@ -16,10 +17,14 @@ class TareaController extends Controller
      */
     public function tareas($id)
     {
-        $tareas = Tarea::join('tema','tarea.idTema','=','tema.idTema')
-        ->where('tema.idCurso',$id)
+        $tareas = Tarea::where('idTema',$id)
         ->get();
         return view('cursos.crearTareas',compact(['id','tareas']));
+    }
+
+    public function crearTarea()
+    {
+
     }
     public function index()
     {
@@ -31,10 +36,6 @@ class TareaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -44,7 +45,20 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $mytime = Carbon::now();
+        $this->validate($request, [
+            'descripcion' => 'required|string',
+            'idTema' => 'required|integer',
+        ]);
+        Tarea::create([
+            'descripcion' => $request['descripcion'],
+            'fechaFin' => $request['fechafin'],
+            'idTema' => $request['idTema'],
+            'fechaInicio' => $mytime,
+        ]);
+        return response()->json([
+            'message' => 'Se agrego correctamente!',
+        ]);
     }
 
     /**

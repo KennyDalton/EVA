@@ -80,7 +80,7 @@ class cursoController extends Controller
             'idCurso' => $maxCurso,
         ]);
         
-        return redirect('/crearDiplomado');
+        return redirect('/misCursos');
         
     }
     public function listaMisCursos()
@@ -97,11 +97,6 @@ class cursoController extends Controller
     public function subirDocumento(){
 
         return view('cursos.subirDocumento');
-    }
-    public function crearTarea()
-    {
-
-        return view('cursos.crearTareas');
     }
 
     public function calendario()
