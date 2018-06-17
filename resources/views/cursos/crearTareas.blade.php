@@ -3,8 +3,10 @@
 {{ csrf_field() }}
 <h1 align="center">Tareas</h1>
 <div class="row">
-  <h2 class="col-md-8">Tareas Entregadas</h2>
-  <a class="btn btn-success" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
+  <h2 class="col-md-8">Tareas del Modulo</h2>
+  @if(Auth()->user()->tipo=='docente')
+    <a class="btn btn-success" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
+  @endif  
 </div>
 <div>
     <table class="table">
@@ -14,6 +16,11 @@
                 <th>Descripcion</th>
                 <th>Fecha Inicio</th>
                 <th>Fecha Fin</th>
+                @if(Auth()->user()->tipo=='estudiante')
+                <th>Estado Entrega</th>
+                <th>Fecha Entrega</th>
+                <th>Subir</th>
+                @endif
             </tr>
         </thead>
       <!--Table head-->
@@ -25,6 +32,11 @@
                   <td> {{ $tarea->descripcion }} </td>
                   <td> {{ $tarea->fechaInicio }} </td>
                   <td> {{ $tarea->fechaFin }} </td>
+                  @if(Auth()->user()->tipo=='estudiante')
+                  <td> {{ $tarea->estadoEntrega }} </td>
+                  <td> {{ $tarea->estadoEntrega }} </td>
+                  <td><a class="btn-floating btn-sm btn-blue btn-modal-subirTarea" data-toggle="tooltip" data-placement="top" title="Subir tarea" href="#"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a></td>
+                  @endif
               </tr>
             @endforeach
         </tbody>

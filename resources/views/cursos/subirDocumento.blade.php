@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 {{ csrf_field() }}
-	<h1 align="center">Subir Documento</h1>
+	<h1 align="center">Documentos</h1>
 <div>
 	<table class="table table-striped table-bordered">
         <!--Table head-->
@@ -26,8 +26,8 @@
         <!--Table body-->
     </table>
 </div>
-<hr class="">
-
+<hr>
+@if(Auth()->user()->tipo=='docente')
   <form>
 		<div class="md-form col-md-6">
             <input type="text" class="form-control" name="nombre" id="nombre">
@@ -54,7 +54,7 @@
        	<button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
        	<button class="btn btn-indigo" id="add">Guardar</button>
    	</div>
-
+@endif
 @endsection
 @section('script')
 <script type="text/javascript">
