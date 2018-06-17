@@ -29,7 +29,13 @@ class cursoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+    public function show($id)
+    {
+        return response()->json([
+            'detalles' => Curso::where('idCurso', $id)->firstOrFail(),
+        ]);
+    }
+
     public function index()
     {
         $idUser = Auth::user()->id;
@@ -94,10 +100,7 @@ class cursoController extends Controller
         return view('cursos.cursosList', compact(['cursos']));
     }
 
-    public function subirDocumento(){
-
-        return view('cursos.subirDocumento');
-    }
+    
 
     public function calendario()
     {
