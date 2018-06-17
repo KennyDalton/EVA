@@ -51,7 +51,7 @@
                             <li>
                                 <a class="waves-effect" href="/buscador">
                                 <i class="fa fa-search"></i>
-                                    Buscar Diplomado
+                                    Inscribirse a un Diplomado
                                 </a>
                             </li>
                             @endif
@@ -77,8 +77,6 @@
                                 </a>
                             </li>
                             @endif
-
-
                         </ul>
                     </div>
                 </li>

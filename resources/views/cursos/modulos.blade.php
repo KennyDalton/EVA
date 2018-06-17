@@ -31,7 +31,7 @@
                   <td> {{ $modulo->contenido }} </td>
                   <td>
                     <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
-                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                   </td>
               </tr>
             @endforeach
