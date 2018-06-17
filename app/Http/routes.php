@@ -26,9 +26,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/modulos/{id}','TemaController@showModules');
 	Route::get('/tareas/{id}','TareaController@tareas');
 	Route::get('/subirDocumento','CursoController@subirDocumento');
-	Route::resource('/crearTarea','TareaController');
+	Route::get('/crearTarea','CursoController@crearTarea');
 	Route::resource('/crearDiplomado','CursoController');
 
 	Route::resource('/crearTema','TemaController');
 	Route::get('/calendario', 'CursoController@calendario');
+	Route::get('/perfil', 'userController@index');
 });

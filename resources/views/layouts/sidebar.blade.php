@@ -77,8 +77,15 @@
                                 </a>
                             </li>
                             @endif
+
+
                         </ul>
                     </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r" href="/perfil">
+                        <i class="fas fa-user"></i>informacion de Perfil
+                    </a>
                 </li>
                 <hr class="wDiplomados
                 <li>
