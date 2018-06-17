@@ -69,23 +69,10 @@
                                 </a>
                             </li>
                             @endif
-                            @if(Auth()->user()->tipo!='docente')
-                            <li>
-                                <a class="waves-effect" href="/inscribir">
-                                <i class="fa fa-search"></i> 
-                                    Inscribirse a un Diplomado
-                                </a>
-                            </li>
-                            @endif
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a class="collapsible-header waves-effect arrow-r" href="/perfil">
-                        <i class="fas fa-user"></i>informacion de Perfil
-                    </a>
-                </li>
-                <hr class="wDiplomados
+                <hr>
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
                         <i class="fa fa-envelope-o"></i> 

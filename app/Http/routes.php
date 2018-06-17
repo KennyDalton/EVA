@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('/crearDiplomado','CursoController');
 	Route::resource('/nuevoArchivo','DocumentoController');
 
+	Route::resource('/registrarse','Curso_UsuarioController');
 	Route::resource('/crearTema','TemaController');
 	Route::get('/calendario', 'CursoController@calendario');
 	Route::get('/perfil', 'userController@index');

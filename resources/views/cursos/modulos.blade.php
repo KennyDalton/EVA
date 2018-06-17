@@ -4,7 +4,9 @@
 <h1 align="center">Modulos</h1>
 <div class="row">
 	<h2 class="col-md-8">Modulos Registrados</h2>
-	<a class="btn btn-info" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+	@if(Auth()->user()->tipo=='docente')
+    <a class="btn btn-info" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+  @endif
 </div>
 <div>
 
@@ -30,8 +32,10 @@
                   <td> {{ $modulo->descripcionTema }} </td>
                   <td> {{ $modulo->contenido }} </td>
                   <td>
+                    @if(Auth()->user()->tipo=='docente')
                     <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                     <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                    @endif
                   </td>
               </tr>
             @endforeach

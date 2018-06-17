@@ -16,8 +16,9 @@
                 <i class="fa fa-user"></i> {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="collapsible-header waves-effect arrow-r" href="/perfil">
+                    <i class="fas fa-user"></i>Informacion de Perfil
+                </a>
                 <a class="dropdown-item" href="{{ url('/logout') }}">
                     <i class="fas fa-sign-out-alt"></i>Logout
                 </a>

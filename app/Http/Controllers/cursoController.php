@@ -56,8 +56,7 @@ class cursoController extends Controller
     public function obtenerCurso($id)
     {
         $curso = curso::where('curso.idCurso', $id)
-        ->groupby('curso.idCurso')
-        ->get();
+        ->firstOrFail();
 
         //dd($curso[0]->descripcion);
         return view('cursos.register',compact('curso'));
