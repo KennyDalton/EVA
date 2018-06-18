@@ -21,7 +21,7 @@
             <!-- Material input password -->
             <div class="md-form">
                 <i class="fa fa-lock prefix grey-text"></i>
-                <input type="text" id="cod" name="cod" class="form-control">
+                <input type="password" id="cod" name="cod" class="form-control">
                 <label for="materialFormCardPasswordEx" class="font-weight-light">Ingresar codigo</label>
             </div>
 

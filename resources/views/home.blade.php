@@ -14,7 +14,7 @@
         <div class="view text-center" >
             <i class="fas fa-user fa-10x"></i>
             <a href="#">
-                <div class="mask rgba-white-slight"></div>
+                <div class="mask rgba-red-slight"></div>
             </a>
         </div>
 

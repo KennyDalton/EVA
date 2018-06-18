@@ -48,9 +48,15 @@ class cursoController extends Controller
 
     public function buscador()
     {
-        $cursos = curso::orderby('nombreCurso','asc')->get();
-        //->where('clasificacion','area')
-        
+        $idUser = Auth::user()->id;
+        $cursos = curso_usuario::where('id',$idUser)
+        ->get();
+        $Inscritos = collect([]);
+        foreach ($cursos as $cursosId) {
+            $Inscritos->push($cursosId->idCurso);
+        }
+        $cursos = Curso::whereNotIn('idCurso',$Inscritos)
+        ->get();
         return view('cursos.buscador', compact('cursos'));
     }
     public function obtenerCurso($id)
@@ -94,8 +100,6 @@ class cursoController extends Controller
         $cursos = Curso_Usuario::where('curso_usuario.id',$idUser)
         ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
         ->get();
-        // $tareas = Tarea::where()
-        // ->get();
         return view('cursos.cursosList', compact(['cursos']));
     }
 

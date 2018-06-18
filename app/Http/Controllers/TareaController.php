@@ -92,7 +92,9 @@ class TareaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return response()->json([
+            'message' => 'Se agrego correctamente!',
+        ]);
     }
 
     /**
