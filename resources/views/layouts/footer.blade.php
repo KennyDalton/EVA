@@ -19,15 +19,15 @@
             <i class="fab fa-facebook-f mr-3"></i>
         </a>
 
-        <a href="#">
+        <a href="https://twitter.com/" target="_blank">
             <i class="fab fa-twitter mr-3"></i>
         </a>
 
-        <a href="#">
+        <a href="https://youtube.com/" target="_blank">
             <i class="fab fa-youtube mr-3"></i>
         </a>
 
-        <a href="#">
+        <a href="https://google.com.com/" target="_blank">
             <i class="fab fa-google-plus mr-3"></i>
         </a>
 
@@ -39,7 +39,7 @@
             <i class="fab fa-pinterest mr-3"></i>
         </a>
 
-        <a href="#">
+        <a href="https://github.com/" target="_blank">
             <i class="fab fa-github mr-3"></i>
         </a>
 
