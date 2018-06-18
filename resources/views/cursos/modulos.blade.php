@@ -2,30 +2,22 @@
 @section('content')
 {{ csrf_field() }}
 <h1 align="center">Modulos</h1>
-<div class="group form-row" style=margin-top:50px;></div>
-
+<div class="group form-row" style="margin-top:50px;"></div>
+<h2 class="col-md-9">Modulos Registrados</h2>
 <div class="row">
-	<h2 class="col-md-9">Modulos Registrados</h2>
-<div class="col-md-6">
- <label class="sr-only" ></label>
+  <div class="col-md-6">
+    <label class="sr-only" ></label>
      <div class="md-form input-group mb-3">
        <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Modulos...">  
       </div>   
- </div> 
+ </div>
+ <div class="col-md-3"></div> 
+  	@if(Auth()->user()->tipo=='docente')
+      <div class="col-md-3">
+      <a class="btn cyan darken-3 btn-rounded" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+      </div>
+    @endif
 </div>  
-
-<div>
-	@if(Auth()->user()->tipo=='docente')
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
-    <a class="btn cyan darken-3 btn-rounded" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
-    </div>
-  @endif
-</div>
-
-
-        
-
 <div>
 
     <table class="table table-striped">
