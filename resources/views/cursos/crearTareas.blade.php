@@ -44,8 +44,8 @@
                   <td> {{ $tarea->fechaFin }} </td>
                   @if(Auth()->user()->tipo=='estudiante')
                   <td> {{ $tarea->estadoEntrega }} </td>
-                  <td> {{ $tarea->estadoEntrega }} </td>
-                  <td><a class="btn-floating btn-sm btn-blue btn-modal-subirTarea" data-toggle="tooltip" data-placement="top" title="Subir tarea" href="#"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a></td>
+                  <td> {{ $tarea->fechaEntrega }} </td>
+                  <td><a class="btn-floating btn-sm btn-blue " data-toggle="modal" data-target="#btn-modal-subirArchivo"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a></td>
                   @endif
               </tr>
             @endforeach
@@ -56,7 +56,43 @@
 <div class="group form-row" style=margin-top:250px;></div>
 
 <!--Table-->
-<div class="modal fade" id="modal-subirTareas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="btn-modal-subirArchivo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg" role="document">
+       <!--Content-->
+       <div class="modal-content">
+           <!--Header-->
+           <div class="modal-header" style="background-color: blue">
+               <h3 class="heading lead" style="color: white">Subir Tarea</h3>
+              
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" class="white-text">&times;</span>
+               </button>
+            </div>
+           <!--Body-->
+           <div class="modal-body">
+               <!-- Grid row -->
+               <d<div class="col-md-6">
+           <!-- Material input -->
+            <div class="file-field">
+                <div class="btn btn-rounded aqua-gradient btn-sm float-left">
+                    <span>Seleccione el Archivo</span>
+                    <input type="file" name="archivo" id="archivo">
+                </div>
+                <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text" placeholder="">
+                </div>
+              </div>
+            </div>
+          
+           <!--Footer-->
+           <div class="modal-footer">
+               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               <a class="btn btn-indigo" id="entregar">Entregar</a>
+           </div>
+     </div>
+   </div>
+ </div>
+ <div class="modal fade" id="modal-subirTareas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog modal-lg" role="document">
        <!--Content-->
        <div class="modal-content">
@@ -96,7 +132,9 @@
                <button class="btn cyan darken-3 btn-rounded" id="add">Guardar</button>
            </div>
            <div class="group form-row" style=margin-top:250px;></div>
-
+     </div>
+   </div>
+ </div>
 @endsection
 @section('script')
   <script type="text/javascript">
@@ -120,17 +158,28 @@
              'fechafin': $('#fechaFin').val(),
              'descripcion': $('#descrip').val(),
              'idTema': '{{$id}}',
+             'archivo': $('#archivo').val(),
          },
            success : function(data) {
                toastr.success(data.message);
                location.reload();
                console.log(data);
-
            },
            error : function(xhr, status) {
                toastr.error('Disculpe, existio un problema!');
            },
        });
+   });
+    $(document).on('click', 'entregar', function() {
+       $.get('/crearTarea/'+$($(this).parents("tr")).data('id'), function(data){
+           $('#fechafin').val(data.estudiante.ciEst);
+           $('#descripcion').val(data.estudiante.nombreEst);
+           $('#idTema').val(data.estudiante.apellidoEst);
+       });
+       type_ = 'PUT';
+       url_ = '/crearTarea/'+$($(this).parents("tr")).data('id');
+
+       $('#modal-subirTareas').modal('show');
    });
   </script>
 @endsection
