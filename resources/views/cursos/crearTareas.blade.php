@@ -2,11 +2,13 @@
 @section('content')
 {{ csrf_field() }}
 <h1 align="center">Tareas</h1>
+<br>
 <div class="row">
   <h2 class="col-md-8">Tareas del Modulo</h2>
   @if(Auth()->user()->tipo=='docente')
+
   <div class="col-md-1"></div>
-    <a class="btn btn-success btn-rounded" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
+    <a class="btn cyan darken-3 btn-rounded" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
   @endif  
 </div>
 <div class="col-md-6">
@@ -15,7 +17,7 @@
  	           <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Tareas...">  
  	   </div>   
        </div>  
-       <div 
+       
 <div>
     <table class="table">
         <!--Table head-->
@@ -90,8 +92,8 @@
           
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger btn-rounded" data-dismiss="modal">Cerrar</button>
-               <button class="btn btn-indigo btn-rounded" id="add">Guardar</button>
+               <button class="btn pink accent-3 btn-rounded" data-dismiss="modal">Cerrar</button>
+               <button class="btn cyan darken-3 btn-rounded" id="add">Guardar</button>
            </div>
            <div class="group form-row" style=margin-top:250px;></div>
 

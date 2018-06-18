@@ -26,6 +26,8 @@
         <!--Table body-->
     </table>
 </div>
+<div class="group form-row" style=margin-top:250px;></div>
+
 <hr>
 @if(Auth()->user()->tipo=='docente')
   <form>
@@ -40,7 +42,7 @@
        	<div class="col-md-6">
            <!-- Material input -->
            	<div class="file-field">
-  		        <div class="btn btn-rounded indigo ">
+  		        <div class="btn btn-rounded cyan darken-3 ">
   		            <span>Seleccione el Archivo</span>
   		            <input type="file" name="archivo" id="archivo">
   		        </div>
@@ -51,8 +53,8 @@
        	</div>
 	</form>
 	<div class="modal-footer">
-       	<button class="btn btn-danger btn-rounded" data-dismiss="modal">Cerrar</button>
-       	<button class="btn btn-indigo btn-rounded" id="add">Guardar</button>
+       	<button class="btn pink accent-3 btn-rounded" data-dismiss="modal">Cerrar</button>
+       	<button class="btn cyan darken-3 btn-rounded" id="add">Guardar</button>
    	</div>
 @endif
 @endsection

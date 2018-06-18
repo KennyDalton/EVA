@@ -3,19 +3,20 @@
 @section('content')
 
 <body style="background-image: url('/img/1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-<div class="group form-row" style=margin-top:80px;></div>
-<h1 style="text-transform: capitalize;color: black;" class="text-center">Bienvenido {{ Auth::user()->tipo }}</h1>
+<div class="group form-row" style=margin-top:50px;></div>
 
 <!-- Grid column -->
 <div class="col-md-6 mb-4" style="color: white; margin-left: auto; margin-right: auto">
     <!--Card-->
-    <div class="card elegant-color">
+    <div class="card rgba-teal-strong">
 
         <!--Card image-->
         <div class="view text-center" >
+        <h1 style="text-transform: capitalize;color: white;" class="text-center">Bienvenido {{ Auth::user()->tipo }}</h1>
+
             <i class="fas fa-user fa-10x"></i>
             <a href="#">
-                <div class="mask rgba-white-slight"></div>
+                <div class="mask rgba-teal-slight"></div>
             </a>
         </div>
 

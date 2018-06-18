@@ -3,26 +3,26 @@
 {{ csrf_field() }}
 <h1 align="center">Modulos</h1>
 <div class="group form-row" style=margin-top:50px;></div>
+
 <div class="row">
 <div class="col-md-6">
-	<h2 class="col-md-8">Modulos Registrados</h2>
-    </div>
+       <label class="sr-only" ></label>
+               <div class="md-form input-group mb-3">
+ 	           <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Modulos...">  
+ 	   </div>   
+       </div>  </div>  
+
+       <div
 	@if(Auth()->user()->tipo=='docente')
     <div class="col-md-3"></div>
     <div class="col-md-3">
-    <a class="btn btn-indigo btn-rounded" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+    <a class="btn cyan darken-3 btn-rounded" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
     </div>
   @endif
 </div>
 
 
-        <div class="col-md-6">
-       <label class="sr-only" ></label>
-               <div class="md-form input-group mb-3">
- 	           <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Modulos...">  
- 	   </div>   
-       </div>  
-       <div 
+        
 
 <div>
 
@@ -124,7 +124,7 @@
           
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               <button class="btn pink accent-3 btn-rounded" data-dismiss="modal">CANCELAR</button>
                <button class="btn btn-light-green btn-rounded" id="add">
                <font color="white" size="2">GUARDAR</font>
                 </button>

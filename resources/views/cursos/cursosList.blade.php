@@ -2,8 +2,26 @@
 @section('content')
 
 <h1 align="center">Mis Diplomados</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+       <label class="sr-only" ></label>
+               <div class="md-form input-group mb-3">
+ 	                <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Diplomado...">  
+ 	            </div>   
+    </div>  
+    <div class="col-md-5"> </div>
 
-<div>
+    <div class="col-md-3">
+    <button class="btn cyan darken-3 btn-rounded">
+                <a href="/crearCurso"><font color="white" size="3">Nuevo Diplomado</font></a>
+			</button>
+    </div>
+
+   </div>
+
+<div class="row">
+
     <table class="table">
         <!--Table head-->
         <thead>
@@ -17,7 +35,7 @@
       <!--Table head-->
 
         <!--Table body-->
-        <tbody>
+        <tbody id="table2">
             @foreach($cursos as $curso)
                <tr data-id="{{ $curso->idCurso }}">
                    <th scope="row"> {{ $curso->codigoCurso }} </th>
@@ -33,6 +51,7 @@
         <!--Table body-->
     </table>
 </div>
+
  <!--Table-->
 <div class="modal fade" id="modal-show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
@@ -84,17 +103,27 @@
            </div>
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               <button class="btn pink accent-3 btn-rounded" data-dismiss="modal">Cerrar</button>
            </div>
        </div>
        <!--/.Content-->
    </div>
+</div>
 </div>
 <div class="group form-row" style=margin-top:250px;></div>
 
 @endsection
 @section('script')
 <script type="text/javascript">
+$(document).ready(function(){
+     	 $("#Search2").on("keyup", function() {
+     	   var value = $(this).val().toLowerCase();
+     	   $("#table2 tr").filter(function() {
+     	     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+     	   });
+     	 });
+        });
+
   $(document).on('click', '.btn-modal-show', function() {
        $.get('/crearDiplomado/'+$($(this).parents("tr")).data('id'), function(data){
            $('#td-nombreCurso').text(data.detalles.nombreCurso);
