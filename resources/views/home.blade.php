@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<body style="background-image: url('/img/eva4.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+
+<body style="background-image: url('/img/1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<div class="group form-row" style=margin-top:80px;></div>
 <h1 style="text-transform: capitalize;color: black;" class="text-center">Bienvenido {{ Auth::user()->tipo }}</h1>
 
 <!-- Grid column -->
 <div class="col-md-6 mb-4" style="color: white; margin-left: auto; margin-right: auto">
-
     <!--Card-->
     <div class="card elegant-color">
 
@@ -35,8 +36,9 @@
 
 </div>
 <!-- Grid column -->	
-<div class="group form-row" style="margin-top:45%">
+
 </div>
 </body>
 
 @endsection
+

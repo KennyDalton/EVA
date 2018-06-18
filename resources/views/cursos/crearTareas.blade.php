@@ -5,9 +5,17 @@
 <div class="row">
   <h2 class="col-md-8">Tareas del Modulo</h2>
   @if(Auth()->user()->tipo=='docente')
-    <a class="btn btn-success" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
+  <div class="col-md-1"></div>
+    <a class="btn btn-success btn-rounded" data-toggle="modal" data-target="#modal-subirTareas"><font color="white" size="3">Asignar Nueva Tarea</font></a>
   @endif  
 </div>
+<div class="col-md-6">
+       <label class="sr-only" ></label>
+               <div class="md-form input-group mb-3">
+ 	           <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Tareas...">  
+ 	   </div>   
+       </div>  
+       <div 
 <div>
     <table class="table">
         <!--Table head-->
@@ -26,7 +34,7 @@
       <!--Table head-->
 
         <!--Table body-->
-        <tbody>
+        <tbody id=table2>
             @foreach($tareas as $tarea)
               <tr data-id='{{ $tarea->idTarea }}'>
                   <td> {{ $tarea->descripcion }} </td>
@@ -43,6 +51,8 @@
         <!--Table body-->
     </table>
 </div>
+<div class="group form-row" style=margin-top:250px;></div>
+
 <!--Table-->
 <div class="modal fade" id="modal-subirTareas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog modal-lg" role="document">
@@ -80,12 +90,24 @@
           
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-               <button class="btn btn-indigo" id="add">Guardar</button>
+               <button class="btn btn-danger btn-rounded" data-dismiss="modal">Cerrar</button>
+               <button class="btn btn-indigo btn-rounded" id="add">Guardar</button>
            </div>
+           <div class="group form-row" style=margin-top:250px;></div>
+
 @endsection
 @section('script')
   <script type="text/javascript">
+
+       $(document).ready(function(){
+     	 $("#Search2").on("keyup", function() {
+     	   var value = $(this).val().toLowerCase();
+     	   $("#table2 tr").filter(function() {
+     	     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+     	   });
+     	 });
+        });
+
     $(document).on('click', '#add', function(e) {
        e.preventDefault();
        $.ajax({

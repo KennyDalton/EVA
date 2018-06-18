@@ -2,6 +2,7 @@
 @section('content')
 
 <h1 align="center">Mis Diplomados</h1>
+
 <div>
     <table class="table">
         <!--Table head-->
@@ -53,7 +54,7 @@
                    <!-- Grid column -->
                    <div class="col-md-12">
                        <table class="table table-bordered">
-                           <tbody>
+                           <tbody id="table2">
                                <tr>
                                    <th scope="row">NombreCurso</th>
                                    <td id="td-nombreCurso"></td>
@@ -89,6 +90,8 @@
        <!--/.Content-->
    </div>
 </div>
+<div class="group form-row" style=margin-top:250px;></div>
+
 @endsection
 @section('script')
 <script type="text/javascript">
