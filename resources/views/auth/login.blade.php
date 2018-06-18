@@ -48,7 +48,6 @@
                             <input type="password" id="password" class="form-control validate" name="password">
                             <label for="password">Your password</label>
                         </div>
-
                         <br>
                         
                         <div class="text-center">

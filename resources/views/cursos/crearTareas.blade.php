@@ -61,7 +61,7 @@
        <!--Content-->
        <div class="modal-content">
            <!--Header-->
-           <div class="modal-header" style="background-color: blue">
+           <div class="modal-header" style="background-color: black">
                <h3 class="heading lead" style="color: white">Subir Tarea</h3>
               
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -74,7 +74,7 @@
                <d<div class="col-md-6">
            <!-- Material input -->
             <div class="file-field">
-                <div class="btn btn-rounded aqua-gradient btn-sm float-left">
+                <div class="btn btn-rounded cyan darken-3 btn-sm float-left">
                     <span>Seleccione el Archivo</span>
                     <input type="file" name="archivo" id="archivo">
                 </div>
@@ -86,8 +86,8 @@
           
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-               <a class="btn btn-indigo" id="entregar">Entregar</a>
+               <button class="btn pink accent-3 btn-rounded" data-dismiss="modal">Cerrar</button>
+               <a class="btn cyan darken-3 btn-rounded" id="entregar" btn-rounded><font color="white">Entregar</font></a>
            </div>
      </div>
    </div>
