@@ -2,12 +2,30 @@
 @section('content')
 {{ csrf_field() }}
 <h1 align="center">Modulos</h1>
+<div class="group form-row" style=margin-top:50px;></div>
+
 <div class="row">
 	<h2 class="col-md-9">Modulos Registrados</h2>
+<div class="col-md-6">
+ <label class="sr-only" ></label>
+     <div class="md-form input-group mb-3">
+       <input class="form-control pl-0 rounded-0" id="Search2" type="text" placeholder="Buscar Modulos...">  
+      </div>   
+ </div> 
+</div>  
+
+<div>
 	@if(Auth()->user()->tipo=='docente')
-    <a class="btn btn-info" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+    <a class="btn cyan darken-3 btn-rounded" data-toggle="modal" data-target="#modal-temas"><font color="white" size="3">Agregar Modulo</font></a>
+    </div>
   @endif
 </div>
+
+
+        
+
 <div>
 
     <table class="table table-striped">
@@ -24,7 +42,7 @@
       <!--Table head-->
 
         <!--Table body-->
-        <tbody>
+        <tbody id="table2">
             @foreach($modulos as $modulo)
               <tr data-id='{{ $modulo->idTema }}'>
                   <!--<th scope="row"> {{ $modulo->idTema }} </th>-->
@@ -108,7 +126,7 @@
           
            <!--Footer-->
            <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               <button class="btn pink accent-3 btn-rounded" data-dismiss="modal">CANCELAR</button>
                <button class="btn btn-light-green btn-rounded" id="add">
                <font color="white" size="2">GUARDAR</font>
                 </button>
@@ -117,10 +135,22 @@
        <!--/.Content-->
    </div>
 </div>
+<div class="group form-row" style=margin-top:250px;></div>
+
 <!-- Modal agregar y modificar estudiante -->
 @endsection
 @section('script')
   <script type="text/javascript">
+
+     $(document).ready(function(){
+     	 $("#Search2").on("keyup", function() {
+     	   var value = $(this).val().toLowerCase();
+     	   $("#table2 tr").filter(function() {
+     	     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+     	   });
+     	 });
+        });
+
    $(document).on('click', '#add', function(e) {
        e.preventDefault();
        $.ajax({

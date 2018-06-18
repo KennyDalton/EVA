@@ -8,7 +8,7 @@
 <body style="background:#ededed">
     <!-- Purple Header -->
     
-<div class="edge-header blue-grey darken-1" >
+<div class="edge-header blue-grey darken-4" >
 
 <div class="row" >
     <div class="col-md-3"></div>
@@ -33,6 +33,8 @@
                         </div>
 
                         <!--Body-->
+                        
+
                         <div class="md-form">
                             <i class="fa fa-envelope prefix grey-text"></i>
                             <label for="email">Your email</label>
@@ -49,8 +51,17 @@
 
                         <br>
 
+                        <div class="md-form">
+                            <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        
                         <div class="text-center">
-                            <button class="btn btn-  cyan darken-3 waves-effect waves-light">Login</button>
+                            <button class="btn btn-rounded  cyan darken-3 waves-effect waves-light">Login</button>
                         </div>
                     </form>
                     <!-- Form -->

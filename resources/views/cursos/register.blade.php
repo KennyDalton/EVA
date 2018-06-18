@@ -26,8 +26,9 @@
             </div>
 
             <div class="text-center py-4 mt-3">
-                <a class="btn btn-indigo" id="add" name="add">Registrarse</a>
-                <a href="/home" class="btn btn-info">Cancel</a>
+                
+                <a href="/home" class="btn pink accent-3 btn-rounded">Cancelar</a>
+                <a class="btn cyan darken-3 btn-rounded" id="add" name="add"><font color="white">Registrarse</font></a>
             </div>
         </form>
         <!-- Material form register -->

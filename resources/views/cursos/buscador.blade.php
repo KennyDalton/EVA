@@ -4,8 +4,11 @@
 	{{ csrf_field() }}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<h1 align="center">Buscar Diplomado</h1>
-	<div class="md-form input-group mb-3">
+	
+	<div class="col-md-6">
+	<div class="col md-form input-group mb-3">
         <input style="width: 30%" type="text" class="form-control pl-0 rounded-0" id="Search1" type="text" placeholder="Escriba el nombre de algun Diplomado para ser buscado...">	
+	</div>
 	</div>
 	<div >
 	    <table class="table table-striped tablaScroll2 ">

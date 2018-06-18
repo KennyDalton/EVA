@@ -7,8 +7,9 @@
 
 <body style="background:#ededed">
     <!-- Purple Header -->
-<div class="edge-header blue-grey darken-1"></div>
+<div class="edge-header blue-grey darken-4"></div>
 <!-- Main Container -->
+
 <div class="container free-bird">
     <div class="row">
         <div class="col-md-8 col-lg-7 mx-auto float-none white z-depth-1 py-2 px-2">
@@ -20,10 +21,18 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <!-- Heading -->
-                        <h3 class="dark-grey-text text-center">
-                        <i class="fas fa-user-plus fa-lg"></i><strong>Registrarse</strong>
-                        </h3>
-                        <hr>
+                        <!-- <h3 class="dark-grey-text text-center">
+                        <i class="fas fa-user-plus fa-lg"></i><strong> Registrarse</strong>
+                        </h3> -->
+                        <div class="form-header  cyan darken-3">
+                            <h3>
+                                <i class="fa fa-lock white-text"></i> Registrarse
+                            </h3>
+                        </div>
+
+
+                        <br>
+                        
                         <div class="row">
                         <div class="col-md-6">
                             <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
@@ -39,6 +48,7 @@
                             </select>
                         </div>
                         </div>
+
                         <div class="md-form {{ $errors->has('name') ? 'has-error' : '' }}">
                             <input type="text" id="name" class="form-control" name="name">
                             <label for="name">Nombres</label>
@@ -85,7 +95,7 @@
                             @endif
                         </div>
                         <div class="text-center">
-                            <button class="btn cyan darken-3">Registrarse</button>
+                            <button class="btn cyan darken-3 btn-rounded">Registrarse</button>
                             <hr>
                         </div>
                     </form>

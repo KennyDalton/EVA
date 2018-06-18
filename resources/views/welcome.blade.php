@@ -6,7 +6,7 @@
             .carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
         </style>
     </head>
-    <body class="fixed-sn cyan-skin">
+    <body class="fixed-sn black-skin">
         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
             <div class="container">
@@ -24,10 +24,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" href="#">
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- Right -->
                     <ul class="navbar-nav nav-flex-icons">
@@ -68,7 +68,7 @@
             <div class="carousel-inner" role="listbox">
                 <!--First slide-->
                 <div class="carousel-item active">
-                    <div class="view" style="background-image: url('/img/fd2.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    <div class="view" style="background-image: url('/img/fd3.jpg'); background-repeat: no-repeat; background-size: cover;">
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                             <!-- Content -->
@@ -92,7 +92,7 @@
                 <!--/First slide-->
                 <!--Second slide-->
                 <div class="carousel-item">
-                    <div class="view" style="background-image: url('/img/fd1.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    <div class="view" style="background-image: url('/img/fd2.jpg'); background-repeat: no-repeat; background-size: cover;">
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                             <!-- Content -->
@@ -116,7 +116,7 @@
                 <!--/Second slide-->
                 <!--Third slide-->
                 <div class="carousel-item">
-                    <div class="view" style="background-image: url('/img/fd3.jpg'); background-repeat: no-repeat; background-size:cover;">
+                    <div class="view" style="background-image: url('/img/fd1.jpg'); background-repeat: no-repeat; background-size:cover;">
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
                             <!-- Content -->
