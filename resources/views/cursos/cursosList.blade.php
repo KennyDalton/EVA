@@ -26,10 +26,10 @@
         <!--Table head-->
         <thead>
             <tr>
-                <th>Codigo Del Diplomado</th>
-                <th>Nombre del Diplomado</th>
-                <th>Descripcion</th>
-                <th class="col-md-2 text-center">Acciones</th>
+                <th style="width: 10%">Codigo Del Diplomado</th>
+                <th style="width: 30%">Nombre del Diplomado</th>
+                <th style="width: 50%">Descripcion</th>
+                <th style="width: 10%">Acciones</th>
             </tr>
         </thead>
       <!--Table head-->
@@ -41,8 +41,8 @@
                    <th scope="row"> {{ $curso->codigoCurso }} </th>
                    <td> {{ $curso->nombreCurso }} </td>
                    <td> {{ $curso->descripcion }} </td>
-                   <td class="col-md-2 text-center" align="center">
-                        <a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="Detalles Diplomado" data-target="#modal-show"><i class="fa fa-eye mt-2 fa-lg"></i></a>
+                   <td>
+                        <a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="Detalles Diplomado" data-target="#modal-show"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
                         <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Modulos" href="/modulos/{{ $curso->idCurso }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                     </td>
                </tr>

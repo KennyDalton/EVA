@@ -15,7 +15,7 @@
 
     <!-- Social icons -->
     <div class="pb-4">
-        <a href="#">
+        <a href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook-f mr-3"></i>
         </a>
 

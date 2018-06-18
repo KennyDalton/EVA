@@ -50,15 +50,6 @@
                         </div>
 
                         <br>
-
-                        <div class="md-form">
-                            <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
-                            <option value="estudiante">Estudiante</option>
-                            <option value="docente">Docente</option>
-                            </select>
-                        </div>
-
-                        <br>
                         
                         <div class="text-center">
                             <button class="btn btn-rounded  cyan darken-3 waves-effect waves-light">Login</button>

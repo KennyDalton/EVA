@@ -38,12 +38,7 @@ class cursoController extends Controller
 
     public function index()
     {
-        $idUser = Auth::user()->id;
-        $temas = Curso_Usuario::where('curso_usuario.id',$idUser)
-        ->join('curso', 'curso_usuario.idCurso', '=', 'curso.idCurso')
-        ->join('tema','curso.idCurso', '=', 'tema.idCurso')
-        ->get(); 
-        return view('cursos.createCurso', compact(['temas']));
+        return view('cursos.createCurso');
     }
 
     public function buscador()

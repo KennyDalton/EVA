@@ -42,7 +42,7 @@
                         <ul>
                             @if(Auth()->user()->tipo=='docente')
                             <li>
-                                <a class="waves-effect" href="/crearCurso">
+                                <a class="waves-effect" href="/crearDiplomado">
                                 <i class="fas fa-user"></i> Nuevo Diplomado
                                 </a>
                             </li>

@@ -19,7 +19,6 @@ Route::auth();
 Route::group(['middleware' => 'auth'], function () {
 	route::get('/index','viewController@index');
 	Route::get('/home','HomeController@index');
-	Route::get('/crearCurso','CursoController@index');
 	Route::get('/buscador','CursoController@buscador');
 	Route::get('/inscribir/{id}', 'CursoController@obtenerCurso');
 	Route::get('/misCursos', 'CursoController@listaMisCursos');

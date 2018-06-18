@@ -28,7 +28,7 @@
                 <th>Nombre modulo</th>
                 <th>Descripcion</th>
                 <th>Contenido</th>
-                <th align="center" class="text-center">Asignar Tarea</th>
+                <th>Asignar Tarea</th>
             </tr>
         </thead>
       <!--Table head-->
@@ -38,17 +38,17 @@
             @foreach($modulos as $modulo)
               <tr data-id='{{ $modulo->idTema }}'>
                   <!--<th scope="row"> {{ $modulo->idTema }} </th>-->
-                  <td> {{ $modulo->nombreTema }} </td>
-                  <td> {{ $modulo->descripcionTema }} </td>
-                  <td> {{ $modulo->contenido }} </td>
-                  <td class="col-md-2 text-center" align="center">
+                  <td style="width: 10%"> {{ $modulo->nombreTema }} </td>
+                  <td style="width: 5%"> {{ $modulo->descripcionTema }} </td>
+                  <td style="width: 75%"> {{ $modulo->contenido }} </td>
+                  <td style="width: 10%">
                     @if(Auth()->user()->tipo=='docente')
-                    <a class="btn-floating btn-sm btn-blue btn-modal-verTareas text-center" data-toggle="tooltip" data-placement="top" title="Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 fa-lg text-center"></i></a>
-                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 fa-lg"></i></a>
+                    <a class="btn-floating btn-sm btn-blue btn-modal-verTareas text-center" data-toggle="tooltip" data-placement="top" title="Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg text-center"></i></a>
+                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Subir Documento" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                     @endif
                     @if(Auth()->user()->tipo=='estudiante')
-                    <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Ver Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 fa-lg"></i></a>
-                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Ver Documentos" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 fa-lg"></i></a>
+                    <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Ver Tareas" href="/tareas/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
+                    <a class="btn-floating btn-sm btn-purple btn-modal-SubirDocumento" data-toggle="tooltip" data-placement="top" title="Ver Documentos" href="/subirDocumento/{{ $modulo->idTema }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                     @endif
                   </td>
               </tr>
