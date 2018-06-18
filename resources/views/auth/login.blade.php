@@ -49,14 +49,14 @@
                             <label for="password">Your password</label>
                         </div>
 
-                        <br>
+                        <!-- <br>
 
                         <div class="md-form">
                             <select class="mdb-select colorful-select dropdown-primary md-form mt-0" name="tipo" id="tipo">
                             <option value="estudiante">Estudiante</option>
                             <option value="docente">Docente</option>
                             </select>
-                        </div>
+                        </div> -->
 
                         <br>
                         

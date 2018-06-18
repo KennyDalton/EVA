@@ -26,10 +26,10 @@
         <!--Table head-->
         <thead>
             <tr>
-                <th>Codigo Del Diplomado</th>
-                <th>Nombre del Diplomado</th>
-                <th>Descripcion</th>
-                <th class="col-md-2 text-center">Acciones</th>
+                <th style="width: 10%">Codigo</th>
+                <th style="width: 30%">Nombre del Diplomado</th>
+                <th style="width: 45%">Descripcion</th>
+                <th style="width: 15%" >Acciones</th>
             </tr>
         </thead>
       <!--Table head-->
@@ -38,11 +38,11 @@
         <tbody id="table2">
             @foreach($cursos as $curso)
                <tr data-id="{{ $curso->idCurso }}">
-                   <th scope="row"> {{ $curso->codigoCurso }} </th>
-                   <td> {{ $curso->nombreCurso }} </td>
-                   <td> {{ $curso->descripcion }} </td>
-                   <td class="col-md-2 text-center" align="center">
-                        <a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="Detalles Diplomado" data-target="#modal-show"><i class="fa fa-eye mt-2 fa-lg"></i></a>
+                   <th scope="row" style="width: 10%"> {{ $curso->codigoCurso }} </th>
+                   <td style="width: 30%"> {{ $curso->nombreCurso }} </td>
+                   <td style="width: 45%"> {{ $curso->descripcion }} </td>
+                   <td style="width: 15%">
+                        <a class="btn-floating btn-sm btn-mdb-color btn-modal-show" data-toggle="tooltip" data-placement="top" title="Detalles Diplomado" data-target="#modal-show"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
                         <a class="btn-floating btn-sm btn-blue btn-modal-verTareas" data-toggle="tooltip" data-placement="top" title="Modulos" href="/modulos/{{ $curso->idCurso }}"><i class="fa fa-upload mt-2 ml-2 fa-lg"></i></a>
                     </td>
                </tr>
